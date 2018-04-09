@@ -1,0 +1,52 @@
+﻿$btnPadding: 1em;
+
+button, .c-btn, .c-btn:visited {
+    padding: calc(#{$btnPadding}/2) $btnPadding;
+    background-color: $primary-color;
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: $bold;
+    transition: $hoverTransition;
+    border-radius: 2px;
+    line-height: 1.25;
+
+    &:after {
+        content: "\A0\A0\203A";
+    }
+
+    &:hover {
+        box-shadow: $hoverShadow;
+        background-color: $primary-color;
+    }
+}
+
+.c-btn--secondary, .c-btn--secondary:visited {
+    background-color: $secondary-color;
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
+
+.c-btn--reverse, .c-btn--reverse:visited {
+    background-color: transparent;
+    color: $primary-color;
+    border: solid 2px $primary-color;
+
+    &:hover {
+        background-color: $primary-color;
+        box-shadow: none;
+        color: #ffffff;
+    }
+
+    &.c-btn--reverse-secondary, .c-btn--reverse-secondary:visited {
+        border-color: $secondary-color;
+        color: $secondary-color;
+
+        &:hover {
+            background-color: $secondary-color;
+            color: #ffffff;
+        }
+    }
+}

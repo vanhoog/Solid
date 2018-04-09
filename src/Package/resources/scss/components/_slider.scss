@@ -1,0 +1,10 @@
+﻿.slick-slider {
+    width:100%;
+    height:200px;
+}
+
+.slick-arrow {
+    &.slick-next, &.slick-prev {
+        background:#e6e6e6;
+    }
+}

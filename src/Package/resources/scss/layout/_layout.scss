@@ -1,0 +1,62 @@
+﻿body {
+   padding-top: 64px;
+}
+
+
+.o-page {
+    padding: 0 $page-margin;
+}
+
+.o-content {
+    max-width: 70rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.o-segment-main {
+    padding-bottom: calc(5rem/1.175);
+    padding-top: calc(5rem/1.175);
+
+    @media only screen and (min-width: 900px) {
+        padding-bottom: 5rem;
+        padding-top: 5rem;
+    }
+}
+
+.o-section-main {
+    margin-bottom: calc(5rem/1.175);
+    margin-top: calc(5rem/1.175);
+    @media only screen and (min-width: 900px) {
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+    }
+}
+
+.o-section-sub {
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem; 
+}
+
+.o-section-subsub {
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;  
+}
+
+
+// o-section-start, o-section-end, o-segment-start and o-segment-end should always be at the end of this document.
+// as they should always overwrite any other margin settings. Therefor they also have !important to overwrite everything.
+.o-section-start {
+    margin-top: 0 !important;
+}
+
+.o-section-end {
+    margin-bottom: 0 !important;
+}
+
+.o-segment-start {
+    padding-top: 0 !important;
+}
+
+.o-segment-end {
+    padding-bottom: 0 !important;
+}

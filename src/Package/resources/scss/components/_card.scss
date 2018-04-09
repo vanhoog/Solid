@@ -1,0 +1,14 @@
+﻿
+.c-image-card {
+    margin-left: -$colPadding;
+    margin-top: -$colPadding;
+    margin-right: -$colPadding;
+
+    .c-image-card__wrapper {
+        padding-bottom: 45%;
+    }
+}
+
+.c-card-title {
+    margin-top: $paragraph-margin;
+}

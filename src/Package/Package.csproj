@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFrameworks>dnx451;dnxcore50</TargetFrameworks>
+    <AssemblyName>Package</AssemblyName>
+    <PackageId>Package</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\**\*;node_modules;bower_components" />
+    <EmbeddedResource Remove="wwwroot\**\*;node_modules;bower_components" />
+    <None Remove="resources\scripts\app - Copy.min.js" />
+    <None Remove="resources\scripts\app - Copy.min.map" />
+    <None Remove="resources\scripts\fade.js" />
+    <None Remove="resources\scripts\includes.js" />
+    <None Remove="resources\scss\base\_base - Copy.scss" />
+    <None Remove="resources\scss\base\_fonts.scss" />
+    <None Remove="resources\scss\base\_normalize.scss" />
+    <None Remove="resources\scss\components\_card.scss" />
+    <None Remove="resources\scss\components\_social.scss" />
+    <None Remove="resources\scss\helpers\_mixins.scss" />
+    <None Remove="resources\scss\helpers\_utilities.scss" />
+    <None Remove="resources\scss\layout\_columns.scss" />
+    <None Remove="resources\scss\layout\_layout.scss" />
+    <Content Include="resources\scripts\app.js" />
+    <Content Include="resources\scripts\app.min.js" />
+    <Content Include="resources\scripts\app.min.map" />
+    <Content Include="resources\scripts\fade.min.js" />
+    <Content Include="resources\scripts\fade.min.map" />
+    <Content Include="resources\scripts\includes.min.js" />
+    <Content Include="resources\scripts\includes.min.map" />
+    <Content Include="resources\scripts\vendor\flexibility.js" />
+    <Content Include="resources\scss\components\_card.scss" />
+    <Content Include="resources\scss\components\_social.scss" />
+    <Content Include="resources\scss\components\_button.scss" />
+    <Content Include="resources\scss\includes\_fonts.scss" />
+    <Content Include="resources\scss\base\_normalize.scss" />
+    <Content Include="resources\scss\base\_base.scss" />
+    <Content Include="resources\scss\includes\_mixins.scss" />
+    <Content Include="resources\scss\helpers\_utilities.scss" />
+    <Content Include="resources\scss\includes\_animations.scss" />
+    <Content Include="resources\scss\includes\_variables.scss" />
+    <Content Include="resources\scss\layout\_footer.scss" />
+    <Content Include="resources\scss\layout\_columns.scss" />
+    <Content Include="resources\scss\layout\_layout.scss" />
+    <Content Include="resources\scss\layout\_forms.scss" />
+    <Content Include="resources\scss\layout\_navigation.scss" />
+    <Content Include="resources\scss\layout\_shame.scss" />
+    <Content Include="resources\scss\components\_slider.scss" />
+    <Content Include="resources\scss\pages\_home.scss" />
+    <Content Include="resources\scss\styles.scss" />
+    <Content Include="resources\scss\themes\_theme.scss" />
+    <None Update="node_modules;bower_components;**.xproj;**.user;**.vspscc">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'dnx451' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>
