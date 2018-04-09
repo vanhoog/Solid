@@ -3,9 +3,6 @@
   "private": true,
   "dependencies": {
     "bourbon": "4.2.6",
-    "foundation-sites": "6.1.2",
-    "magnific-popup": "1.0.0",
-    "jQuery": "2.1.4",
-    "slick-carousel": "1.5.9"
+    "jQuery": "2.1.4"
   }
 }
