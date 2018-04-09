@@ -33,6 +33,7 @@ button, .c-btn, .c-btn:visited {
     background-color: transparent;
     color: $primary-color;
     border: solid 2px $primary-color;
+    padding: calc((#{$btnPadding} / 2) - 2px) calc(#{$btnPadding} - 2px);
 
     &:hover {
         background-color: $primary-color;
@@ -48,5 +49,25 @@ button, .c-btn, .c-btn:visited {
             background-color: $secondary-color;
             color: #ffffff;
         }
+    }
+}
+
+
+.c-btn-group {
+    font-family: monospace; // for spacing columns correctly
+    letter-spacing: -.65em; // this too */
+    text-align: left;
+    margin-bottom: calc(#{-$paragraph-margin}/2);
+    margin-top: calc(#{-$paragraph-margin}/2);
+    margin-left: -$paragraph-margin;
+
+    .c-btn {
+        margin-bottom: calc(#{$paragraph-margin}/2);
+        margin-top: calc(#{$paragraph-margin}/2);
+        font-family: $font-family; // be sure to reset the font and letter-spacing
+        letter-spacing: normal;
+        vertical-align: top;
+        vertical-align: top;
+        margin-left: $paragraph-margin;
     }
 }

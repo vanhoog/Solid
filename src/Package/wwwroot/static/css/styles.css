@@ -3283,8 +3283,9 @@ input[type="file"] {
 select {
   height: 37px; }
 
-body {
-  padding-top: 64px; }
+@media only screen and (min-width: 600px) {
+  body {
+    padding-top: 64px; } }
 
 .o-page {
   padding: 0 1.25rem; }
@@ -3454,6 +3455,7 @@ main:before {
   line-height: 1; }
   .c-nav-toggle:hover, .c-nav-toggle:visited:hover {
     background-color: #fafafa;
+    color: #222;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   .c-nav-toggle:before, .c-nav-toggle:visited:before {
     margin: 0 auto;
@@ -3556,7 +3558,8 @@ button, .c-btn, .c-btn:visited {
 .c-btn--reverse, .c-btn--reverse:visited {
   background-color: transparent;
   color: #ff761e;
-  border: solid 2px #ff761e; }
+  border: solid 2px #ff761e;
+  padding: calc((1em / 2) - 2px) calc(1em - 2px); }
   .c-btn--reverse:hover, .c-btn--reverse:visited:hover {
     background-color: #ff761e;
     box-shadow: none;
@@ -3567,6 +3570,22 @@ button, .c-btn, .c-btn:visited {
     .c-btn--reverse.c-btn--reverse-secondary:hover, .c-btn--reverse .c-btn--reverse-secondary:visited:hover, .c-btn--reverse:visited.c-btn--reverse-secondary:hover, .c-btn--reverse:visited .c-btn--reverse-secondary:visited:hover {
       background-color: #ff3500;
       color: #ffffff; }
+
+.c-btn-group {
+  font-family: monospace;
+  letter-spacing: -.65em;
+  text-align: left;
+  margin-bottom: calc(-1em/2);
+  margin-top: calc(-1em/2);
+  margin-left: -1em; }
+  .c-btn-group .c-btn {
+    margin-bottom: calc(1em/2);
+    margin-top: calc(1em/2);
+    font-family: Arial, sans-serif;
+    letter-spacing: normal;
+    vertical-align: top;
+    vertical-align: top;
+    margin-left: 1em; }
 
 .c-image-card {
   margin-left: -1.25rem;

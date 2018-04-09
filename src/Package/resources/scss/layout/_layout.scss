@@ -1,5 +1,7 @@
 ﻿body {
-   padding-top: 64px;
+     @media only screen and (min-width: 600px) {
+        padding-top: 64px;
+     }
 }
 
 
