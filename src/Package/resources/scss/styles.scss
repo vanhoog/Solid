@@ -5,6 +5,7 @@
         "includes/fonts",
         "includes/variables",
         "includes/mixins",
+        "../../bower_components/foundation-sites/assets/foundation-flex.scss",
         "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 
 //Helper includes
@@ -35,3 +36,7 @@
 //Utilities includes
 @import "helpers/utilities",
          "includes/animations";
+
+//Vendor includes
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+@import "../../bower_components/slick-carousel/slick/slick-theme.scss";
