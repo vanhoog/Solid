@@ -3482,7 +3482,7 @@ main:before {
   left: auto;
   right: 0;
   bottom: 0;
-  background-color: #fafafa;
+  background-color: #ff5d33;
   transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   z-index: 999;
   transform: translateX(100%);
@@ -3492,7 +3492,7 @@ main:before {
     .c-nav {
       max-width: none;
       transform: translateX(0);
-      position: absolute;
+      position: fixed;
       bottom: auto; } }
 
 .c-nav__list {
@@ -3521,12 +3521,12 @@ main:before {
   font-size: 14px;
   display: block;
   padding: 1.6em 1.25rem;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #cc2a00;
   text-decoration: none;
-  color: #222; }
+  color: #ffffff; }
   .c-nav__link:hover, .c-nav__link:visited:hover {
-    color: inherit;
-    background-color: #e1e1e1; }
+    color: #ffffff;
+    background-color: #ff3500; }
   @media only screen and (min-width: 600px) {
     .c-nav__link, .c-nav__link:visited {
       border-bottom: none; } }
@@ -3707,6 +3707,10 @@ button, .c-btn, .c-btn:visited {
 
 .u-right {
   text-align: right; }
+
+.u-circle {
+  overflow: hidden;
+  border-radius: 100%; }
 
 /* Include animations */
 @-webkit-keyframes scale {

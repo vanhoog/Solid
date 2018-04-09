@@ -95,7 +95,7 @@ main {
     left: auto;
     right: 0;
     bottom: 0;
-    background-color: $quiet-color;
+    background-color: lighten($secondary-color, 10%);
     transition: $hoverTransition;
     z-index: 999;
     transform: translateX(100%);
@@ -105,7 +105,7 @@ main {
     @media only screen and (min-width: 600px) {
         max-width: none;
         transform: translateX(0);
-        position: absolute;
+        position: fixed;
         bottom: auto;
     }
 }
@@ -140,14 +140,15 @@ main {
     font-size: 14px;
     display: block;
     padding: 1.6em $page-margin;
-    border-bottom: 1px solid darken($quiet-color, 10%);
+    border-bottom: 1px solid darken($secondary-color, 10%);
     text-decoration: none;
-    color: $text-color;
+    color: #ffffff;
 
     &:hover {
-        color: inherit;
-        background-color: darken($quiet-color, 10%);
+        color: #ffffff;        
+        background-color: $secondary-color;
     }
+
     @media only screen and (min-width: 600px) {
         border-bottom: none;
     }
