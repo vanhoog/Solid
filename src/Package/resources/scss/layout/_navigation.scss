@@ -136,50 +136,70 @@ main {
     padding: 1em;
 }
 .c-subNav {
-    position: absolute;
-    height: 0;
-    background-color:  darken($secondary-color, 10%);
-    overflow: hidden;
-    transition: $hoverTransition;
+    padding: 0;
+    margin: 0;
+    list-style: none;
     .c-nav__link {
         background-color: $secondary-color;
         padding: 0.75em $page-margin;
+        padding-left: calc(#{$page-margin} * 1.5);
         &:hover {
             background-color: darken($secondary-color, 20%) !important;
         }
     }
+    @media only screen and (min-width: 600px) {
+        .c-nav__link {
+
+            padding-left: $page-margin;
+        }
+        margin-left: 0;
+        position: absolute;
+        height: 0;
+        background-color:  darken($secondary-color, 10%);
+        overflow: hidden;
+        transition: $hoverTransition;
+
+    }
 }
 
 .has-subNav:hover {
-        background-color: darken($secondary-color, 10%);
-        .c-nav__link {
-            background-color: transparent;
-        }
-    .c-subNav {
-        height: 39px;
-        transition: $hoverTransition;
-        right: 0;
-
+    background-color: darken($secondary-color, 10%);
+    .c-nav__link {
+        background-color: transparent;
     }
-    .c-nav__link--main {
-        &:after {
-            transform: rotateX(180deg);
+    @media only screen and (min-width: 600px) {
+        .c-subNav {
+            height: 39px;
+            transition: $hoverTransition;
+            right: 0;
+
+        }
+        .c-nav__link--main {
+            &:after {
+                transform: rotateX(180deg);
+            }
         }
     }
 }
 
 .has-subNav {
     transition: $hoverTransition;
-    .c-nav__link--main {
-        &:after {
-            content: "";
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            background-image: url('../icons/ic_keyboard_arrow_down.svg');
-            background-size: contain;
-            vertical-align: middle;
-            transition: $hoverTransition;
+    .c-nav__link--main, .c-nav__link--main:visited {
+        border-bottom: none;
+    }
+    @media only screen and (min-width: 600px) {
+        .c-nav__link--main, .c-nav__link--main:visited {
+            border-bottom: none !important;
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                background-image: url('../icons/ic_keyboard_arrow_down.svg');
+                background-size: contain;
+                vertical-align: middle;
+                transition: $hoverTransition;
+            }
         }
     }
 }
