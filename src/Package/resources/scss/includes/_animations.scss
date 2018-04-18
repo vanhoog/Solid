@@ -1,14 +1,5 @@
 ﻿/* Include animations */
 
-@include keyframes(scale) {
-  from {
-    @include transform(scale(0));
-  }
-  to {
-    @include transform(scale(1));
-  }
-}
-
 
 .js .js-fadein, .js .js-fadein-up, .js .js-fadein-down, .js .js-fadein-left, .js .js-fadein-right {
     opacity: 0;

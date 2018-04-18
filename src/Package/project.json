@@ -1,4 +1,4 @@
 {
-  "websiteRoot": "wwwroot",
+  "websiteRoot": "public",
   "version": "1.0.0-*"
 }

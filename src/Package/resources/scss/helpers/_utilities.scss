@@ -38,6 +38,7 @@
     position: relative;
 }
 .u-list {
+    padding:0;
     margin: 0;
     list-style: none;
 }
@@ -56,6 +57,9 @@
     position: relative;
     width: 100%;
 }
+ .u-image--66 {
+     padding-bottom: 66.79%;
+ }
 
 .u-video iframe, .u-video object, .u-video embed, .u-image img {
     height: 100%;

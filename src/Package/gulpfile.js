@@ -18,8 +18,8 @@ var gulp = require('gulp'),
 
 
 var siteStaticPath = project.websiteRoot,
-    siteStaticScriptsPath = siteStaticPath + "/static/scripts",
-    siteStaticCssPath = siteStaticPath + "/static/css";
+    siteStaticScriptsPath = siteStaticPath + "/assets/js",
+    siteStaticCssPath = siteStaticPath + "/assets/css";
 
 // Styles
 gulp.task('sass', function () {
@@ -29,31 +29,18 @@ gulp.task('sass', function () {
           }))
         .pipe(gulp.dest(siteStaticCssPath))
 
-
-        //.pipe(sass().on('error', function (err) {
-        //    console.log(err);
-        //    this.emit('end');
-        //}))
-        //.pipe(gulp.dest(siteStaticCssPath))
-        //.pipe(rename({ suffix: '.min' }))
-        //.pipe(minifyCss())
-        //.pipe(gulp.dest(siteStaticCssPath))
         .pipe(notify({ message: 'Styles task complete' }));
 });
 
 gulp.task('vendor-scripts', function () {
     return gulp.src([
         'bower_components/jquery/dist/jquery.js',
-        'bower_components/foundation-sites/dist/foundation.js',
-        'bower_components/slick-carousel/slick/slick.js',
-        'wwwroot/src/scripts/vendor/flexibility.js', //Fix IE9 Flex Columns
-        'resources/scripts/includes.js',
-        'resources/scripts/fade.js',
+        siteStaticPath + '/src/scripts/vendor/flexibility.js', //Fix IE9 Flex Columns
     ])
-    .pipe(plumber()) 
+    .pipe(plumber())
     .pipe(concat('vendors.js'))
     .pipe(gulp.dest(siteStaticScriptsPath))
-    .pipe(rename({ suffix: '.min' })) 
+    .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(gulp.dest(siteStaticScriptsPath))
     .pipe(notify({ message: 'Vendor scripts bundle task complete' }));
