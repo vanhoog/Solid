@@ -138,13 +138,39 @@ main {
 .c-subNav {
     position: absolute;
     height: 0;
-    background-color: lighten($secondary-color, 10%);
+    background-color:  darken($secondary-color, 10%);
     overflow: hidden;
     transition: $hoverTransition;
+    .c-nav__link {
+        background-color: $secondary-color;
+        padding: 0.75em $page-margin;
+        &:hover {
+            background-color: darken($secondary-color, 20%) !important;
+        }
+    }
 }
+
+.has-subNav:hover {
+        background-color: darken($secondary-color, 10%);
+        .c-nav__link {
+            background-color: transparent;
+        }
+    .c-subNav {
+        height: 39px;
+        transition: $hoverTransition;
+        right: 0;
+
+    }
+    .c-nav__link--main {
+        &:after {
+            transform: rotateX(180deg);
+        }
+    }
+}
+
 .has-subNav {
     transition: $hoverTransition;
-    .c-nav-link--main {
+    .c-nav__link--main {
         &:after {
             content: "";
             display: inline-block;
@@ -154,17 +180,6 @@ main {
             background-size: contain;
             vertical-align: middle;
             transition: $hoverTransition;
-        }
-    }
-}
-.has-subNav:hover {
-    .c-subNav {
-        height: 63px;
-        transition: $hoverTransition;
-    }
-    .c-nav-link--main {
-        &:after {
-            transform: rotateX(180deg);
         }
     }
 }
@@ -180,7 +195,7 @@ main {
 
     &:hover {
         color: #ffffff;
-        background-color: $secondary-color;
+        background-color:  darken($secondary-color, 10%);
     }
 
     @media only screen and (min-width: 600px) {

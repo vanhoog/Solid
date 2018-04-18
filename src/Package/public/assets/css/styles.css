@@ -662,13 +662,29 @@ main:before {
 .c-subNav {
   position: absolute;
   height: 0;
-  background-color: #ff5d33;
+  background-color: #cc2a00;
   overflow: hidden;
   transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .c-subNav .c-nav__link {
+    background-color: #ff3500;
+    padding: 0.75em 1.25rem; }
+    .c-subNav .c-nav__link:hover {
+      background-color: #992000 !important; }
+
+.has-subNav:hover {
+  background-color: #cc2a00; }
+  .has-subNav:hover .c-nav__link {
+    background-color: transparent; }
+  .has-subNav:hover .c-subNav {
+    height: 39px;
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    right: 0; }
+  .has-subNav:hover .c-nav__link--main:after {
+    transform: rotateX(180deg); }
 
 .has-subNav {
   transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  .has-subNav .c-nav-link--main:after {
+  .has-subNav .c-nav__link--main:after {
     content: "";
     display: inline-block;
     width: 1em;
@@ -677,13 +693,6 @@ main:before {
     background-size: contain;
     vertical-align: middle;
     transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-
-.has-subNav:hover .c-subNav {
-  height: 63px;
-  transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-
-.has-subNav:hover .c-nav-link--main:after {
-  transform: rotateX(180deg); }
 
 .c-nav__link, .c-nav__link:visited {
   background-color: #ff5d33;
@@ -695,7 +704,7 @@ main:before {
   color: #ffffff; }
   .c-nav__link:hover, .c-nav__link:visited:hover {
     color: #ffffff;
-    background-color: #ff3500; }
+    background-color: #cc2a00; }
   @media only screen and (min-width: 600px) {
     .c-nav__link, .c-nav__link:visited {
       border-bottom: none; } }
