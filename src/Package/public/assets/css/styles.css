@@ -912,7 +912,7 @@ button, .c-btn, .c-btn:visited {
 /* Include animations */
 .js .js-fadein, .js .js-fadein-up, .js .js-fadein-down, .js .js-fadein-left, .js .js-fadein-right {
   opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.43, 0, 0.14, 1.01), transform 0.8s cubic-bezier(0.43, 0, 0.14, 1.01); }
+  transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .js .js-fadein.js-fadein-delay, .js .js-fadein-up.js-fadein-delay, .js .js-fadein-down.js-fadein-delay, .js .js-fadein-left.js-fadein-delay, .js .js-fadein-right.js-fadein-delay {
   transition-delay: .8s; }
