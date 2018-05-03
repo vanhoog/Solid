@@ -5,7 +5,7 @@ $colPadding: 1.25rem;
     margin-left: calc(#{-$colSpacing}/2);
     margin-right: calc(#{-$colSpacing}/2);
     margin-top: calc(#{-$colSpacing}/2);
-    margin-bottom: -$colSpacing;
+    margin-bottom: calc(#{-$colSpacing}/2);
     font-family: monospace; // for spacing columns correctly
     letter-spacing: -.65em; // this too */
     text-align: left; // center or justify for columns in last row

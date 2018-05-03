@@ -5,6 +5,9 @@ $(function () {
     $body.addClass('js');
     Nav = new Nav();
     FadeIn = new FadeIn();
+    LoadMoreItems = new LoadMoreItems();
+    Lightbox = new Lightbox();
+
 });
 
 
@@ -99,4 +102,98 @@ FadeIn.prototype.scroll = function (t) {
             } else this.clear()
         }
     }
+}
+
+
+// -----------------------------------------------------------
+// LOAD MORE PARSE
+// -----------------------------------------------------------
+
+var LoadMoreItems = function() {
+    this.element =  $('.js-LoadMore');
+    if (!this.element.length) return
+    this.parse();
+}
+
+LoadMoreItems.prototype.parse = function(){
+    var MoreItems;
+    this.element.each(function(index, item) {
+		item = $(item);
+        MoreItems = new LoadMore(item);
+	}.bind(this));
+}
+
+// -----------------------------------------------------------
+// LOAD MORE
+// -----------------------------------------------------------
+
+var LoadMore = function(element) {
+	this.element = element;
+    this.items =  this.element.find('li');
+
+    this.text =  this.element.attr('data-text');
+    if (this.items.length > 8) {
+        this.element.append('<div class="o-section-sub o-section-end u-center"><button class="c-btn c-btn--reverse c-btn--reverse-secondary js-btn">'+ this.text + '</button></div>')
+        this.items.hide();
+        this.items.slice(0, 8).show();
+    }
+    this.trigger = this.element.find('.js-btn');
+    this.trigger.on('click', this.more.bind(this));
+};
+
+LoadMore.prototype.more = function() {
+    this.items.filter(':hidden').slice(0, 4).show();
+    if (this.items.length == this.items.filter(':visible').length) {
+        this.trigger.hide();
+    }
+};
+
+
+// -----------------------------------------------------------
+// LIGHTBOX
+// -----------------------------------------------------------
+
+var Lightbox = function() {
+    this.element =  $('.js-lightbox');
+    if (!this.element.length) return
+    this.parse();
+}
+
+Lightbox.prototype.parse = function(){
+    var items;
+    this.element.each(function(index, item) {
+		item = $(item);
+        items = new LightboxItem(item);
+
+	}.bind(this));
+}
+
+var LightboxItem = function(element){
+    this.element = element;
+    this.lightbox = $('.c-lightbox');
+    if(!this.lightbox.length) return;
+    this.element.find('.js-lightbox__inner').on('click', this.open.bind(this))
+    this.src = this.element.find('.js-lightbox__inner').attr('href');
+    this.type = this.element.attr('data-type');
+    this.img = "<div class='c-lightbox__imgwrapper'><img class='c-lightbox__image' src='"+ this.src +"' /> <button class='c-lightbox__close'><span class='u-accessibility'>Close</span></button></div>";
+    this.videoElement = "<div class='u-video c-lightbox__video'><iframe width='560' height='315' src='"+ this.src +"' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe><button class='c-lightbox__close'><span class='u-accessibility'>Close</span></button></div>";
+
+}
+
+LightboxItem.prototype.open = function(e) {
+    e.preventDefault();
+    this.lightbox.addClass('u-is-visible');
+    if (this.type == 'video') {
+        this.lightbox.find('.c-lightbox__inner').append(this.videoElement);
+    }else if (this.type == 'image') {
+        this.lightbox.find('.c-lightbox__inner').append(this.img);
+    }
+    this.closeBtn = this.lightbox.find('button');
+    this.closeBtn.on('click', this.close.bind(this));
+}
+
+
+LightboxItem.prototype.close = function() {
+    this.lightbox.removeClass('u-is-visible');
+    $('.c-lightbox__inner').empty();
 }

@@ -1,6 +1,8 @@
 ﻿$btnPadding: 1em;
 
 button, .c-btn, .c-btn:visited {
+    border: none;
+    cursor: pointer;
     padding: calc(#{$btnPadding}/2) $btnPadding;
     background-color: $primary-color;
     display: inline-block;
@@ -11,13 +13,8 @@ button, .c-btn, .c-btn:visited {
     border-radius: 2px;
     line-height: 1.25;
 
-    &:after {
-        content: "\A0\A0\203A";
-    }
-
     &:hover {
-        box-shadow: $hoverShadow;
-        background-color: $primary-color;
+        background-color: $secondary-color;
     }
 }
 
@@ -30,28 +27,37 @@ button, .c-btn, .c-btn:visited {
 }
 
 .c-btn--reverse, .c-btn--reverse:visited {
-    background-color: transparent;
+    background-color: #ffffff;
     color: $primary-color;
-    border: solid 2px $primary-color;
+    border: solid 2px $secondary-color;
+    border-radius: 25px;
     padding: calc((#{$btnPadding} / 2) - 2px) calc(#{$btnPadding} - 2px);
 
     &:hover {
-        background-color: $primary-color;
+        background-color: $secondary-color;
         box-shadow: none;
         color: #ffffff;
     }
 
     &.c-btn--reverse-secondary, .c-btn--reverse-secondary:visited {
-        border-color: $secondary-color;
+        border-color: $primary-color;
         color: $secondary-color;
 
         &:hover {
-            background-color: $secondary-color;
+            background-color: $primary-color;
             color: #ffffff;
         }
     }
 }
-
+// @media only screen and (min-width: 900px) {
+//     .c-btn--more {
+//         padding: 1.25rem;
+//         font-size: 1.25rem;
+//         &:after {
+//             display: none;
+//         }
+//     }
+// }
 
 .c-btn-group {
     font-family: monospace; // for spacing columns correctly
@@ -71,3 +77,15 @@ button, .c-btn, .c-btn:visited {
         margin-left: $paragraph-margin;
     }
 }
+
+// .c-btn--cta, .c-btn--cta:visited{
+//     background-color: $secondary-color;
+//     margin: 0.45rem 0;
+//     margin-left: 1.25rem;
+//     &:hover {
+//         box-shadow: none;
+//         background-color: $primary-color;
+//         text-decoration: none;
+//
+//     }
+// }

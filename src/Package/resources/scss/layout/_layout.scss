@@ -1,6 +1,6 @@
 ﻿body {
      @media only screen and (min-width: 600px) {
-        padding-top: 64px;
+        padding-top: 91px;
      }
 }
 
@@ -10,9 +10,17 @@
 }
 
 .o-content {
-    max-width: 70rem;
+    max-width: 1160px;
     margin: 0 auto;
     position: relative;
+}
+
+.o-content--alt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .o-segment-main {
@@ -36,12 +44,12 @@
 
 .o-section-sub {
     margin-bottom: 2.5rem;
-    margin-top: 2.5rem; 
+    margin-top: 2.5rem;
 }
 
 .o-section-subsub {
     margin-bottom: 1.25rem;
-    margin-top: 1.25rem;  
+    margin-top: 1.25rem;
 }
 
 
