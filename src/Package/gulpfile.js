@@ -14,7 +14,45 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     plumber = require('gulp-plumber'),
     del = require('del'),
-    project = require('./project.json');
+    project = require('./project.json'),
+    ts = require("gulp-typescript"),
+    tsProject = ts.createProject("tsconfig.json"),
+    browserify = require("browserify"),
+    source = require('vinyl-source-stream'),
+    tsify = require("tsify"),
+    uglify = require('gulp-uglify'),
+    sourcemaps = require('gulp-sourcemaps'),
+    buffer = require('vinyl-buffer'),
+    paths = {
+    pages:
+        ['src/*.html']
+    };
+
+gulp.task("copy-html", function () {
+    return gulp.src(paths.pages)
+        .pipe(gulp.dest("public/assets/js"));
+});
+
+gulp.task("ts", ["copy-html"], function () {
+    return browserify({
+        basedir: '.',
+        debug: true,
+        entries: ['resources/ts/main.ts'],
+        cache: {},
+        packageCache: {}
+    })
+    .plugin(tsify)
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest("public/assets/js"))
+    return tsProject.src()
+        .pipe(tsProject())
+        .js.pipe(gulp.dest("public/assets/js"));
+});
 
 
 var siteStaticPath = project.websiteRoot,
@@ -47,19 +85,21 @@ gulp.task('vendor-scripts', function () {
 });
 
 
-gulp.task('scripts', function () {
-    return gulp.src([
-        'resources/scripts/app.js'
-    ])
-    .pipe(plumber())
-    .pipe(jshint())
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest(siteStaticScriptsPath))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(uglify())
-    .pipe(gulp.dest(siteStaticScriptsPath))
-    .pipe(notify({ message: 'Script bundle task complete' }));
-});
+// gulp.task('scripts', function () {
+//     return gulp.src([
+//         'resources/scripts/app.js'
+//     ])
+//     .pipe(plumber())
+//     .pipe(jshint())
+//     .pipe(concat('scripts.js'))
+//     .pipe(gulp.dest(siteStaticScriptsPath))
+//     .pipe(rename({ suffix: '.min' }))
+//     .pipe(uglify())
+//     .pipe(gulp.dest(siteStaticScriptsPath))
+//     .pipe(notify({ message: 'Script bundle task complete' }));
+// });
+
+//TS
 
 // Clean
 gulp.task('clean', function (cb) {
@@ -68,7 +108,7 @@ gulp.task('clean', function (cb) {
 
 //// Default task
 gulp.task('default', function () {
-    gulp.start('sass', 'scripts');
+    gulp.start('sass', 'ts', 'copy-html');
 });
 
 // Watch
@@ -77,7 +117,9 @@ gulp.task('watch', function () {
     // Watch .scss files
     gulp.watch('resources/scss/**/*.scss', ['sass']);
 
-    // Watch .js files
-    gulp.watch('resources/scripts/**/*.js', ['scripts']);
+
+
+    // Watch .ts files
+    gulp.watch('resources/ts/**/*.ts', ['ts']);
 
 });
