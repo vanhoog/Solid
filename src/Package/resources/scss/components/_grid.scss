@@ -1,0 +1,48 @@
+.c-grid__inner {
+    padding: 1.25rem;
+}
+.c-grid {
+    .o-columns {
+        margin-left: -.625rem;
+        margin-right: -.625rem;
+        margin-top: -.625rem;
+        margin-bottom: -.625rem;
+    }
+    .o-column {
+        margin: 0.625rem 0;
+        padding: 0 .625rem;
+    }
+    .c-wooninspiratie__inner {
+        padding: 1.25rem;
+        border-bottom-left-radius: 9px;
+        border-bottom-right-radius: 9px;
+    }
+}
+
+
+
+.c-grid__label {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: $primary-color;
+    color: #ffffff;
+    z-index: 1;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: $hoverTransition;
+}
+
+.c-grid__link {
+    display: block;
+    text-decoration: none;
+    transition: $hoverTransition;
+    &:hover {
+        text-decoration: none;
+        background-color: transparent;
+
+        .c-grid__label {
+            background-color: $secondary-color;
+        }
+    }
+}

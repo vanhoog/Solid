@@ -6,15 +6,20 @@ Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    source = require('vinyl-source-stream'),
     minifyCss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
+    sourcemaps = require('gulp-sourcemaps'),
+    buffer = require('vinyl-buffer'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     plumber = require('gulp-plumber'),
     del = require('del'),
-    project = require('./project.json');
+    project = require('./project.json'),
+    ts = require('gulp-typeScript'),
+    tsProject = ts.createProject('tsconfig.json');
 
 
 var siteStaticPath = project.websiteRoot,
@@ -46,19 +51,18 @@ gulp.task('vendor-scripts', function () {
     .pipe(notify({ message: 'Vendor scripts bundle task complete' }));
 });
 
-
-gulp.task('scripts', function () {
-    return gulp.src([
-        'resources/scripts/app.js'
-    ])
-    .pipe(plumber())
-    .pipe(jshint())
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest(siteStaticScriptsPath))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(uglify())
-    .pipe(gulp.dest(siteStaticScriptsPath))
-    .pipe(notify({ message: 'Script bundle task complete' }));
+gulp.task("scripts", function () {
+    return tsProject.src()
+        .pipe(tsProject())
+        .pipe(plumber())
+        .pipe(jshint())
+        .pipe(concat('scripts.js'))        
+        .pipe(buffer())
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(uglify())
+         .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(siteStaticScriptsPath))
+        .pipe(notify({ message: 'Script bundle task complete' }));
 });
 
 // Clean
@@ -78,6 +82,6 @@ gulp.task('watch', function () {
     gulp.watch('resources/scss/**/*.scss', ['sass']);
 
     // Watch .js files
-    gulp.watch('resources/scripts/**/*.js', ['scripts']);
+    gulp.watch('resources/scripts/**/*', ['scripts']);
 
 });

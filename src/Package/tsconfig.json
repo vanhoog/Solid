@@ -1,0 +1,15 @@
+{
+    "files": [
+        "resources/scripts/ts/main.ts",
+        "resources/scripts/ts/loadMore.ts",
+        "resources/scripts/ts/lightbox.ts",
+        "resources/scripts/ts/menu.ts",
+        "resources/scripts/ts/fade.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "target": "es5",
+        "module": "commonjs"
+
+    }
+}

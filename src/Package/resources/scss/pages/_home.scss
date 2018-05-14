@@ -1,1 +1,52 @@
 ﻿/*Overrule pages */
+
+
+.c-price-title {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    color: #fff;
+    max-width: 520px;
+}
+.u-light{
+    color: #ffffff;
+}
+.c-what {
+    .o-columns {
+
+        margin: 0;
+    }
+    .o-column {
+        padding: 0;
+        margin: 0;
+        &:first-child {
+            display: table-caption;
+            padding-bottom: 69%;
+            @media only screen and (min-width: 600px) {
+                display: table-cell;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .o-column__inner {
+        padding: $page-margin;
+        @media only screen and (min-width: 600px) {
+        padding: 30px 50px;
+        }
+
+        color: #ffffff;
+    }
+    figure {
+        img {
+            z-index: 0;
+        }
+    }
+}
+.c-what__title {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 20px;
+    word-break: break-all;
+
+}

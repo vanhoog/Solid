@@ -1,0 +1,11 @@
+
+
+.c-cta{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5rem;
+    .c-btn {
+        padding: 1.25rem;
+    }
+}

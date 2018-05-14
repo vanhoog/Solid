@@ -1,5 +1,7 @@
 ﻿// Utilities
-
+img {
+    max-width: 100%;
+}
 .u-accessibility, .js .js-accessibility {
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
@@ -22,6 +24,11 @@
 .u-primary-bg {
     background-color: $primary-color;
 }
+
+.u-scondary-bg-alt {
+    background-color: rgba(118, 57, 124, 0.5);
+}
+
 .u-secondary-bg {
     background-color: $secondary-color;
 }
@@ -30,12 +37,21 @@
     border-bottom: 1px solid $secondary-color;
 }
 
+.u-secondary {
+    color: $secondary-color;
+}
+
+.u-primary {
+    color: $primary-color;
+}
+
 .u-shadow {
     box-shadow: $basicShadow;
 }
 
 .u-radius {
-    border-radius: 2px;
+    border-radius: 9px 0px 9px 9px;
+    overflow: hidden;
 }
 .u-center {
     text-align: center;
@@ -45,7 +61,11 @@
 }
 .u-list {
     padding:0;
+    padding-left: 1em;
     margin: 0;
+
+}
+.u-list-clean {
     list-style: none;
 }
 .u-video {
@@ -72,6 +92,11 @@
 .u-image--275x175 {
     padding-bottom: 63.63%;
 }
+
+.u-image--465x325 {
+    padding-bottom: 69.89%;
+}
+
 .u-video iframe, .u-video object, .u-video embed, .u-image img {
     height: 100%;
     left: 0;
@@ -104,166 +129,6 @@
     overflow: hidden;
 }
 
-
-
-.c-price-title {
-    position: absolute;
-    bottom: 1.25rem;
-    left: 1.25rem;
-    color: #fff;
-    max-width: 520px;
-}
-.u-light{
-    color: #ffffff;
-}
-.c-price {
-    .o-columns {
-        margin-left: -1.25rem;
-        margin-right: -1.25rem;
-    }
-    .o-column {
-        padding: 0 1.25rem;
-    }
-    .o-column__inner {
-        padding: 0 1.25rem;
-    }
-    figure {
-        margin-bottom: 1.25rem;
-        img {
-            z-index: 0;
-        }
-        &:before {
-            z-index: 1;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: 0;
-            content: "";
-            display: block;
-            background: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
-        }
-    }
-}
-
-.c-what {
-    position: relative;
-    padding: calc(5rem/1.175) 0;
-    @media only screen and (min-width: 900px) {
-        padding: 5rem 0;
-        .o-columns {
-            margin-left: -2.5rem;
-            margin-right: -2.5rem;
-        }
-        .o-column {
-            padding: 0 2.5rem;
-        }
-    }
-    color: #ffffff;
-    background-image: url("https://placeimg.com/1980/700/arch");
-    background-size: cover;
-
-    &:before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        content: "";
-        display: block;
-        background: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
-    }
-}
-
-.c-hero {
-    padding-bottom: 31.25%;
-    position: relative;
-    color: #ffffff;
-    background-image: url("https://placeimg.com/1980/618/arch");
-    background-size: cover;
-    .title {
-        position: absolute;
-        left: 0;
-        bottom: 2.5rem;
-    }
-    margin-bottom: 60px;
-    &:before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        content: "";
-        display: block;
-        background: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
-    }
-}
-
-.c-wooninspiratie__inner {
-    padding: 1.25rem;
-}
-.c-wooninspiratie {
-    .o-columns {
-        margin-left: -.625rem;
-        margin-right: -.625rem;
-        margin-top: -.625rem;
-        margin-bottom: -.625rem;
-    }
-    .o-column {
-        margin: 0.625rem 0;
-        padding: 0 .625rem;
-    }
-    .c-wooninspiratie__inner {
-        padding: 1.25rem;
-        border-bottom-left-radius: 9px;
-        border-bottom-right-radius: 9px;
-    }
-}
-
-.c-cta{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 5rem;
-    .c-btn {
-        padding: 1.25rem;
-    }
-}
-
-.c-grid__label {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background-color: $primary-color;
-    color: #ffffff;
-    z-index: 1;
-    font-size: 14px;
-    padding: 5px 10px;
-    transition: $hoverTransition;
-}
-
-.c-grid__link {
-    display: block;
-    text-decoration: none;
-    transition: $hoverTransition;
-    &:hover {
-        text-decoration: none;
-        background-color: transparent;
-
-        .c-grid__label {
-            background-color: $secondary-color;
-        }
-    }
-}
 
 .u-clean {
     text-decoration: none;

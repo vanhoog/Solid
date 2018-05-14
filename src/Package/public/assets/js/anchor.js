@@ -3,9 +3,9 @@
 // -----------------------------------------------------------
 $(function() {
 	Anchors = new Anchors();
+
+
 });
-
-
 
 // -----------------------------------------------------------
 // ANCHORS
@@ -65,10 +65,32 @@ var Anchor = function(element) {
 
 	this.target = $('#' + this.id);
 	this.target.attr('id', 'js-' + this.id);
+
+//	$(document).bind('scroll', this.barChange.bind(this));
+
 }
 
 Anchor.prototype.click = function(e) {
 	if (this.id == Anchors.hash) {
 		Anchors.hashchange();
 	}
+}
+
+
+Anchor.prototype.barChange = function(e) {
+
+	$('section').each(function(index, item){
+		item = $(item)
+		console.log( item.attr('id').slice(3))
+		if (
+		  item.offset().top < window.pageYOffset + 10
+		   //begins before top
+		&& item.offset().top + item.height() > window.pageYOffset + 10
+		//but ends in visible area
+		//+ 10 allows you to change hash before it hits the top border
+		) {
+			window.location.hash = item.attr('id');
+		}
+	}.bind(this));
+
 }

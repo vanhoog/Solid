@@ -1,0 +1,14 @@
+
+.c-hero {
+    height: calc(100vh - 100px);
+    position: relative;
+    color: #ffffff;
+    background-image: url("https://placeimg.com/1903/875/arch");
+    background-size: cover;
+    .title {
+        position: absolute;
+        left: 0;
+        bottom: 2.5rem;
+    }
+    margin-bottom: 60px;    
+}

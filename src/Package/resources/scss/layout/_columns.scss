@@ -1,5 +1,5 @@
-﻿$colSpacing: 1rem;
-$colPadding: 1.25rem;
+﻿$colSpacing: 1.42875rem;
+$colPadding: 1.5rem;
 
 .o-columns {
     margin-left: calc(#{-$colSpacing}/2);
@@ -27,6 +27,12 @@ $colPadding: 1.25rem;
                 border-bottom: none;
                 border-top: $colSpacing solid #ffffff; // color of the websites background
             }
+        }
+    }
+    &--table {
+        display: table;
+        .o-column {
+            display: table-cell;
         }
     }
 }

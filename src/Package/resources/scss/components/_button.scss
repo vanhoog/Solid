@@ -19,10 +19,13 @@ button, .c-btn, .c-btn:visited {
 }
 
 .c-btn--secondary, .c-btn--secondary:visited {
+    min-width: 250px;
     background-color: $secondary-color;
+    border-radius: 25px;
+    text-align: center;
 
     &:hover {
-        background-color: $secondary-color;
+        background-color: $primary-color;
     }
 }
 

@@ -11,6 +11,10 @@ main {
         transition: background $hoverTransition, z-index 0s 0.3s;
     }
 }
+
+.c-logo {
+    display: inline-block;
+}
 .is-activeNav {
     main {
         &:before {
@@ -89,8 +93,7 @@ main {
     }
 }
 
-.c-nav {
-    box-shadow: $fixedShadow;
+.c-nav {    
     position: fixed;
     top: 0;
     left: auto;

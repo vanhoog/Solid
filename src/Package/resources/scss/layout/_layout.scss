@@ -4,15 +4,27 @@
      }
 }
 
+figure {
+    margin: 0;
+}
 
 .o-page {
     padding: 0 $page-margin;
 }
 
-.o-content {
-    max-width: 1160px;
+%o-content {
     margin: 0 auto;
     position: relative;
+}
+
+.o-content {
+    @extend %o-content;
+    max-width: 1030px;
+}
+
+.o-content-930 {
+    @extend %o-content;
+    max-width: 930px;
 }
 
 .o-content--alt{
@@ -21,6 +33,10 @@
     left: 0;
     right: 0;
     bottom: 0;
+}
+.o-content-600 {
+    @extend %o-content;
+    max-width: 600px;
 }
 
 .o-segment-main {
@@ -69,4 +85,8 @@
 
 .o-segment-end {
     padding-bottom: 0 !important;
+}
+
+.o-content--right {
+    margin-right: 0;
 }
