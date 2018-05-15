@@ -1045,13 +1045,23 @@ body {
 
 .u-triangle__inner {
   background-color: #52a59b;
-  transition: 0.3s;
+  transition: all 0.3s;
   overflow: hidden;
+  z-index: 1;
   position: absolute;
   /* arctan(27 / 40) = 34.01935deg
    * need to skew by 90deg - 34.01935deg = 55.98065deg
   */
   transform: skewX(-55.98deg); }
+  .u-triangle__inner:hover {
+    transition: all 0.3s;
+    z-index: 2;
+    transform: skewX(0deg); }
+    .u-triangle__inner:hover img, .u-triangle__inner:hover:after {
+      opacity: 1;
+      transform: skewX(0deg); }
+    .u-triangle__inner:hover:after {
+      opacity: 0; }
 
 .u-triangle__inner:first-child {
   left: -.5em;
@@ -1073,6 +1083,8 @@ body {
   transform-origin: inherit; }
 
 .u-triangle__inner:after {
+  opacity: 1;
+  transition: all 0.3s;
   position: absolute;
   z-index: 3;
   margin: .25em 1.5em;

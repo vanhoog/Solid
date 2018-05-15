@@ -23,8 +23,18 @@ class LightboxItems {
         this.element.find('.js-lightbox__inner').on('click', this.open.bind(this));
         this.src = this.element.find('.js-lightbox__inner').attr('href');
         this.type = this.element.attr('data-type');
-        this.img = `<div class='c-lightbox__imgwrapper'><img class='c-lightbox__image' src='${this.src}' /> <button class='c-lightbox__close'><span class='u-accessibility'>Close</span></button></div>`;
-        this.videoElement = `<div class='u-video c-lightbox__video'><iframe width='560' height='315' src='${this.src}' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe><button class='c-lightbox__close'><span class='u-accessibility'>Close</span></button></div>`;
+        this.img = `<div class='c-lightbox__imgwrapper'>
+                        <img class='c-lightbox__image' src='${this.src}' />
+                        <button class='c-lightbox__close'>
+                            <span class='u-accessibility'>Close</span>
+                        </button>
+                    </div>`;
+        this.videoElement = `<div class='u-video c-lightbox__video'>
+                                <iframe width='560' height='315' src='${this.src}' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
+                                <button class='c-lightbox__close'>
+                                    <span class='u-accessibility'>Close</span>
+                                </button>
+                            </div>`;
 
     }
     open(event) {
