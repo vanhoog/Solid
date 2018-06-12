@@ -12,13 +12,7 @@ main {
     }
 }
 .is-activeNav {
-    main {
-        &:before {
-            z-index: 2;
-            background-color: rgba(0,0,0, 0.75);
-            transition: background $hoverTransition;
-        }
-    }
+
 
     .c-nav {
         transform: translateX(0);
@@ -95,19 +89,19 @@ main {
     top: 0;
     left: auto;
     right: 0;
-    bottom: 0;
     transition: $hoverTransition;
     z-index: 999;
-    transform: translateX(100%);
-    max-width: 320px;
+    transform: translateY(-100%);
+    max-width: 100%;
     width: 100%;
     background-color: $quiet-color;
     @media only screen and (min-width: 600px) {
         max-width: none;
-        transform: translateX(0);
-        position: fixed;
+        transform: translateY(0);
+        position: absolute;
         bottom: auto;
         background-color: transparent;
+        box-shadow: none;
     }
 }
 
@@ -115,8 +109,6 @@ main {
     margin: 0;
     list-style: none;
     padding: 0;
-    margin-left: -$page-margin;
-    margin-right: -$page-margin;
      @media only screen and (min-width: 600px) {
          text-align: right;
          margin-left: 0;
@@ -125,12 +117,11 @@ main {
 }
 
 .c-nav__item {
+    display: inline-block;
+    vertical-align: top;
     margin: 0;
     padding: 0;
-     @media only screen and (min-width: 600px) {
-        display: inline-block;
-        vertical-align: top;
-     }
+
 
 }
 
@@ -210,13 +201,11 @@ main {
 .c-nav__link, .c-nav__link:visited {
     background-color: transparent;
     font-size: 16px;
-    display: block;
-    padding:13px 10px;
-    border-bottom: 1px solid darken($secondary-color, 10%);
+    padding:13px 0px;
     text-decoration: none;
     font-weight: bold;
     color: $primary-color;
-
+    display: inline-block;
     &:hover {
         text-decoration: underline;
         background-color:  transparent;

@@ -8,10 +8,11 @@ button, .c-btn, .c-btn:visited {
     display: inline-block;
     color: #ffffff;
     text-decoration: none;
-    font-weight: $bold;
-    transition: $hoverTransition;
+    font-weight: $regular;
+    transition: all $hoverTransition;
     border-radius: 2px;
     line-height: 1.25;
+    font-size: 1.5em;
 
     &:hover {
         background-color: $secondary-color;
@@ -20,23 +21,41 @@ button, .c-btn, .c-btn:visited {
 
 .c-btn--secondary, .c-btn--secondary:visited {
     background-color: $secondary-color;
-
+    box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0), 0px 0px 0px 0px rgba(0, 0, 0, 0);
     &:hover {
-        background-color: $secondary-color;
+        background-color: $primary-color;
+        box-shadow: $hoverShadow;
     }
 }
 
 .c-btn--reverse, .c-btn--reverse:visited {
-    background-color: #ffffff;
-    color: $primary-color;
-    border: solid 2px $secondary-color;
-    border-radius: 25px;
-    padding: calc((#{$btnPadding} / 2) - 2px) calc(#{$btnPadding} - 2px);
-
+    background-color: transparent;
+    color: $secondary-color;
+    border: solid 1px $secondary-color;
+    padding: calc((#{$btnPadding} / 2) - 1px) calc(#{$btnPadding} - 1px);
+    padding-right:  calc((#{$btnPadding} * 3.5) - 1px);
+        box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0), 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    font-size: 1rem;
+    position: relative;
+    &:after {
+        border-left: 1px solid $secondary-color;
+        margin-left: 1rem;
+        content: "\A0\A0\203A";
+        position: absolute;
+        right: $btnPadding;
+        padding: 0.35em 0   ;
+        top: 0;
+        padding-left: 0.5rem;
+        bottom: 0;
+    }
     &:hover {
         background-color: $secondary-color;
         box-shadow: none;
         color: #ffffff;
+        box-shadow: $hoverShadow;
+        &:after {
+               border-left: 1px solid #fafafa;
+        }
     }
 
     &.c-btn--reverse-secondary, .c-btn--reverse-secondary:visited {

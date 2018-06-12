@@ -1,1 +1,16 @@
-<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 128 128" height="128px" id="Layer_1" version="1.1" viewBox="0 0 128 128" width="128px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><rect fill="#0076B4" height="128" width="128"/></g><g><path d="M38.894,109.068H19.89V47.984h19.004V109.068z M29.397,39.639c-6.098,0-11.014-4.933-11.014-11.011   c0-6.077,4.917-11.009,11.014-11.009c6.073,0,11.003,4.933,11.003,11.009C40.4,34.706,35.47,39.639,29.397,39.639z M110,109.068   H91.017V79.363c0-7.084-0.122-16.195-9.864-16.195c-9.879,0-11.387,7.719-11.387,15.688v30.213H50.804V47.984h18.198v8.351h0.261   c2.531-4.802,8.726-9.866,17.962-9.866c19.223,0,22.775,12.648,22.775,29.1V109.068z" fill="#FFFFFF"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="2048px" height="2048px" viewBox="0 0 2048 2048" enable-background="new 0 0 2048 2048" xml:space="preserve">
+<rect y="0" fill="none" width="2048" height="2048"/>
+<g id="in">
+	<path id="n_1_" fill="#215A73" d="M856.78,764.534h230.738v117.824l0,0c34.366-58.914,112.915-117.824,230.743-117.824
+		c245.464,0,270.013,142.371,270.013,348.566v427.11h-230.735v-387.837c0-88.37,4.905-191.468-117.826-191.468
+		c-157.098,0-157.098,93.28-157.098,191.468v387.837H851.871L856.78,764.534L856.78,764.534z"/>
+	<rect id="_x7C__1_" x="473.848" y="764.534" fill="#215A73" width="230.742" height="775.677"/>
+	<path id="_x28____x29__1_" fill="#215A73" d="M586.763,371.785c75.92,0,137.463,61.543,137.463,137.463
+		c0,75.916-61.543,137.463-137.463,137.463c-75.916,0-137.458-61.547-137.458-137.463
+		C449.305,433.328,510.848,371.785,586.763,371.785z"/>
+</g>
+</svg>

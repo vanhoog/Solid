@@ -2,10 +2,10 @@ export class LoadMore {
     element = $('.js-LoadMore');
     constructor() {
         let loadMoreElements;
-        this.element.each(function(index, item) {
+        this.element.each((index, item) => {
             let items = $(item);
-            const loadMoreElements = new LoadMoreElements(items);
-        })
+            let loadMoreElements = new LoadMoreElements(items);
+        });
     }
 }
 
@@ -16,12 +16,12 @@ export class LoadMoreElements {
     btn: any;
     constructor(items) {
         this.element = items;
-        this.items = this.element.find('li');
+        this.items = this.element.find('.js-item');
         this.text =  this.element.attr('data-text');
         if (this.items.length > 2) {
             this.element.append(`
                 <div class="o-section-sub o-section-end u-center">
-                    <button class="c-btn c-btn--reverse c-btn--reverse-secondary js-btn" >${this.text}</button>
+                    <button class="c-btn c-btn--secondary js-btn" >${this.text}</button>
                 </div>
             `)
             this.items.hide();

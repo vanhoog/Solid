@@ -3,6 +3,7 @@
 // -----------------------------------------------------------
 $(function() {
 	Anchors = new Anchors();
+
 });
 
 
@@ -11,6 +12,7 @@ $(function() {
 // ANCHORS
 // -----------------------------------------------------------
 var Anchors = function() {
+
 	this.items = [];
 	this.parse();
 	$window.on('hashchange', this.hashchange.bind(this));
@@ -18,6 +20,7 @@ var Anchors = function() {
 }
 
 Anchors.prototype.parse = function() {
+
 	var anchor;
 	$('.js-anchor').each(function(index, item) {
 		item = $(item);
@@ -25,6 +28,7 @@ Anchors.prototype.parse = function() {
 			anchor = new Anchor(item);
 			item.data('anchor', anchor);
 			this.items.push(anchor);
+
 		}
 	}.bind(this));
 
@@ -51,8 +55,6 @@ Anchors.prototype.hashchange = function(e) {
 	}
 }
 
-
-
 // -----------------------------------------------------------
 // ANCHOR
 // -----------------------------------------------------------
@@ -68,7 +70,8 @@ var Anchor = function(element) {
 }
 
 Anchor.prototype.click = function(e) {
-	if (this.id == Anchors.hash) {
+	console.log('test parse');
+	if (this.id ==  window.location.hash.replace('#', '')) {
 		Anchors.hashchange();
 	}
 }

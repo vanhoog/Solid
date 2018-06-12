@@ -2,10 +2,10 @@ export class Lightbox {
     element = $('.js-lightbox');
     constructor() {
         let openItems;
-        this.element.each(function(index, item) {
+        this.element.each((index, item) => {
             let items = $(item);
-            const openItems = new LightboxItems(items);
-        })
+            let openItems = new LightboxItems(items);
+        });
     }
 }
 

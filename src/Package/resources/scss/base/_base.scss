@@ -74,6 +74,9 @@ p, ol, ul, blockquote, img, table, form, fieldset, pre, iframe, object, embed, v
 p, ol, ul, blockquote, img, table, form, fieldset, pre, iframe, object, embed, video, audio, figure, figcaption, canvas, .par, .paragraph {
     margin-bottom: $paragraph-margin;
 }
+img {
+    max-width: 100%;
+}
 
 li {
     margin-bottom: $paragraph-margin/2;
