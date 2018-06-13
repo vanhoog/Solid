@@ -1,0 +1,22 @@
+.c-hero-header {
+        position: relative;
+        padding-bottom: 56.26%;
+        top: -1.75em;
+        overflow: hidden;
+        transform: skewy(-2.3deg);
+    .c-hero-header__inner {
+        transform: skewy(2.3deg);
+        background-image: url('../images/background/home.jpg');
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -1.75em;
+    }
+}
+
+
+.u-readable--alt {
+    max-width: 591px;
+}

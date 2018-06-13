@@ -334,10 +334,10 @@ h1, h2, h3, h4, h5, h6, .title, .title--sub, .title--subsub {
 h1, .title {
   font-size: 3rem;
   line-height: 1;
-  margin: 0 0 1em; }
+  margin: 0 0 1rem; }
   @media only screen and (min-width: 600px) {
     h1, .title {
-      font-size: 4rem; } }
+      font-size: 48px; } }
 
 h2, .title--sub {
   font-size: 1.75rem;
@@ -435,21 +435,17 @@ input[type="file"] {
 select {
   height: 37px; }
 
-@media only screen and (min-width: 600px) {
-  body {
-    padding-top: 91px; } }
-
 .o-page {
   padding: 0 1.25rem; }
 
 .o-content {
-  max-width: 1160px;
+  max-width: 70em;
   margin: 0 auto;
   position: relative; }
 
 .o-content--alt {
   position: absolute;
-  top: 0;
+  top: 7.5em;
   left: 0;
   right: 0;
   bottom: 0; }
@@ -634,7 +630,6 @@ main:before {
       display: none; } }
 
 .c-nav {
-  box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px;
   position: fixed;
   top: 0;
   left: auto;
@@ -644,13 +639,12 @@ main:before {
   z-index: 999;
   transform: translateX(100%);
   max-width: 320px;
-  width: 100%;
-  background-color: #fafafa; }
+  width: 100%; }
   @media only screen and (min-width: 600px) {
     .c-nav {
       max-width: none;
       transform: translateX(0);
-      position: fixed;
+      position: absolute;
       bottom: auto;
       background-color: transparent; } }
 
@@ -736,10 +730,10 @@ main:before {
   border-bottom: 1px solid #552959;
   text-decoration: none;
   font-weight: bold;
-  color: #20bec6; }
+  color: #ffffff; }
   .c-nav__link:hover, .c-nav__link:visited:hover {
-    text-decoration: underline;
-    background-color: transparent; }
+    background-color: transparent;
+    color: #20bec6; }
   @media only screen and (min-width: 600px) {
     .c-nav__link, .c-nav__link:visited {
       border-bottom: none; } }
@@ -873,6 +867,25 @@ button, .c-btn, .c-btn:visited {
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
+
+.c-hero-header {
+  position: relative;
+  padding-bottom: 56.26%;
+  top: -1.75em;
+  overflow: hidden;
+  transform: skewy(-2.3deg); }
+  .c-hero-header .c-hero-header__inner {
+    transform: skewy(2.3deg);
+    background-image: url("../images/background/home.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -1.75em; }
+
+.u-readable--alt {
+  max-width: 591px; }
 
 .c-socials {
   margin-left: -0.25em;

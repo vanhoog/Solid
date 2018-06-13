@@ -1,23 +1,17 @@
-﻿body {
-     @media only screen and (min-width: 600px) {
-        padding-top: 91px;
-     }
-}
-
-
+﻿
 .o-page {
     padding: 0 $page-margin;
 }
 
 .o-content {
-    max-width: 1160px;
+    max-width: 70em;
     margin: 0 auto;
     position: relative;
 }
 
 .o-content--alt{
     position: absolute;
-    top: 0;
+    top: 7.5em;
     left: 0;
     right: 0;
     bottom: 0;

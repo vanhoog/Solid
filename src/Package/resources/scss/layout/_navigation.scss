@@ -90,7 +90,6 @@ main {
 }
 
 .c-nav {
-    box-shadow: $fixedShadow;
     position: fixed;
     top: 0;
     left: auto;
@@ -101,11 +100,11 @@ main {
     transform: translateX(100%);
     max-width: 320px;
     width: 100%;
-    background-color: $quiet-color;
+
     @media only screen and (min-width: 600px) {
         max-width: none;
         transform: translateX(0);
-        position: fixed;
+        position: absolute  ;
         bottom: auto;
         background-color: transparent;
     }
@@ -215,11 +214,11 @@ main {
     border-bottom: 1px solid darken($secondary-color, 10%);
     text-decoration: none;
     font-weight: bold;
-    color: $primary-color;
+    color: #ffffff;
 
-    &:hover {
-        text-decoration: underline;
+    &:hover {    
         background-color:  transparent;
+        color: $primary-color;
     }
 
     @media only screen and (min-width: 600px) {
