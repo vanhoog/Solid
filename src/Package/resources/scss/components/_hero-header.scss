@@ -1,22 +1,89 @@
 .c-hero-header {
         position: relative;
-        padding-bottom: 56.26%;
-        top: -1.75em;
+        margin-top: -3.5vw;
         overflow: hidden;
-        transform: skewy(-2.3deg);
-    .c-hero-header__inner {
-        transform: skewy(2.3deg);
+        .c-hero-header__inner {
+            padding-top: 7.5em;
+            padding-bottom: 3em;
+            @media only screen and (min-width: 600px) {
+                height: 100vh;
+            }
+        }
+
+    .c-hero-header__image {
+        &:before {
+            content:"";
+            background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 50%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+
+        }
+        &:after {
+            content:"";
+            background: -moz-linear-gradient(bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 50%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+        width: 100%;
         background-image: url('../images/background/home.jpg');
         background-size: cover;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        bottom: -1.75em;
+        bottom: -2.5em;
+    }
+    .c-hero-header__text {
+        position: relative;
+        @media only screen and (min-width: 600px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 7.5em;
+            margin-top: 2.5rem;
+        }
     }
 }
+.c-hero-header__icons {
+    position: absolute;
+    bottom: 1em;
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+.c-hero-header__down {
+    display: inline-block;
 
+    position: relative;
+    &:hover {
+        background-color: transparent;
+        &:before {
+            background-position: center 3em;
 
-.u-readable--alt {
-    max-width: 591px;
+        }
+    }
+    &:before {
+        display: block;
+        position: relative;
+        width: 2.5em;
+        transition: $hoverTransition;
+        height: 2.5em;
+        background-image: url('../icons/ic_down.svg');
+        background-size: contain;
+        content: "";
+    }
 }

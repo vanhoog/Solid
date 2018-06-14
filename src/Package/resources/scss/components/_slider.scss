@@ -1,10 +1,40 @@
-﻿.slick-slider {
-    width:100%;
-    height:200px;
+.c-slider {
+    overflow: hidden;
+    //margin-top: -2.75%;
+    //margin-bottom: 0.75%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.slick-arrow {
-    &.slick-next, &.slick-prev {
-        background:#e6e6e6;
-    }
+.c-slider__img {
+    position: absolute;
+    top: -2em;
+    bottom: -2em;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    background-image: url("../icons/ic_left.svg");
+    background-size: cover;
+    margin-left: 2em;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        background-image: url("../icons/ic_right.svg");
+        background-size: cover;
+        margin-right: 2em;
+}
+.c-swiper-btnwrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }

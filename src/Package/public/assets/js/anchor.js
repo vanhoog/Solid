@@ -41,7 +41,7 @@ Anchors.prototype.hashchange = function(e) {
 				item = this.items[i];
 				if (item.id == hash) {
 					$(item.element).addClass('is-active');
-					$bodyHtml.stop(true).animate({'scrollTop': item.target.offset().top - 111});
+					$bodyHtml.stop(true).animate({'scrollTop': item.target.offset().top});
 
 				}else {
 					$(item.element).removeClass('is-active');

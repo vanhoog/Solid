@@ -3,15 +3,20 @@
     padding: 0 $page-margin;
 }
 
+img {
+    max-width: 100%;
+}
 .o-content {
     max-width: 70em;
     margin: 0 auto;
     position: relative;
 }
-
+.o-content--55 {
+    max-width: 55.625em;
+}
 .o-content--alt{
     position: absolute;
-    top: 7.5em;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;

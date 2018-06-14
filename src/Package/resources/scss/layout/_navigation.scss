@@ -129,13 +129,30 @@ main {
      @media only screen and (min-width: 600px) {
         display: inline-block;
         vertical-align: top;
+        padding-top: 1.25em;
      }
 
 }
 
 .c-nav__logo {
     display: inline-block;
-    padding: 1em;
+    padding: 10px 0;
+    .c-logo {
+        display: block;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 9px 0 9px 9px;
+        max-width: 114px;
+        box-shadow: $basicShadow;
+        transition: $hoverTransition;
+        &:hover {
+            box-shadow: $hoverShadow;
+        }
+        img {
+            display: block;
+        }
+
+    }
 }
 .c-subNav {
     padding: 0;
@@ -213,12 +230,12 @@ main {
     padding:13px 10px;
     border-bottom: 1px solid darken($secondary-color, 10%);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     color: #ffffff;
 
-    &:hover {    
+    &:hover {
         background-color:  transparent;
-        color: $primary-color;
+        color: $secondary-color;
     }
 
     @media only screen and (min-width: 600px) {

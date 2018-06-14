@@ -10,11 +10,12 @@ button, .c-btn, .c-btn:visited {
     text-decoration: none;
     font-weight: $bold;
     transition: $hoverTransition;
-    border-radius: 2px;
+    border-radius: 25px;
     line-height: 1.25;
-
+    box-shadow: $basicShadow;
     &:hover {
         background-color: $secondary-color;
+        box-shadow: $hoverShadow;
     }
 }
 

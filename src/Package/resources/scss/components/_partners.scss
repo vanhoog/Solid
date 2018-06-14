@@ -1,0 +1,32 @@
+.c-partners {
+    background-image: url('../images/background/partner_bg.jpg');
+    background-size: cover;
+    padding-top: 5em;
+    padding-bottom:4.25em;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.25);
+    }
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+    .o-columns {
+        margin-left: -1.35rem;
+        margin-right: -1.35rem;
+    }
+    .c-partner__item {
+        vertical-align: middle;
+        width: 50%;
+        @media only screen and (min-width: 600px) {
+        //    max-width: 20%;
+            width: auto;
+            padding: 0  1.35rem;
+        }
+    }
+}

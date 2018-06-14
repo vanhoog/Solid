@@ -1,3 +1,19 @@
 ﻿footer {
     font-size:  14px;
+    padding: 1em;
+    ul {
+        text-align: center;
+        list-style: none;
+        li {
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+            padding: 0 1em;
+            &:hover {
+                background-color: transparent;
+                color: $secondary-color;
+            }
+        }
+    }
 }
