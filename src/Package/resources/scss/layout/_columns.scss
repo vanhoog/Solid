@@ -1,4 +1,4 @@
-﻿$colSpacing: 10px;
+﻿$colSpacing: 40px;
 $colPadding: 1.25rem;
 
 .o-columns {
@@ -50,6 +50,9 @@ $colPadding: 1.25rem;
     }
 
     @media only screen and (min-width: 600px) {
+        &--mid-66 {
+            width: 66.666%;
+        }
         @for $i from 1 through 6 {
             $width: percentage(1 / $i);
 
@@ -60,6 +63,9 @@ $colPadding: 1.25rem;
     }
 
     @media only screen and (min-width: 900px) {
+        &--66 {
+            width: 66.666%;
+        }
         @for $i from 1 through 12 {
             $width: percentage(1 / $i);
 

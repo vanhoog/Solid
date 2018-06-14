@@ -244,21 +244,10 @@ main {
 }
 
 
-.c-anchor__list {
-    text-align: center;
-    li {
-        display: inline-block;
-        a {
-            padding: 0.75em;
-            font-size: 14px;
-            text-decoration: none;
-            color: $secondary-color;
-            &.is-active, &:hover {
-                background-color: transparent;
-                color: $primary-color;
-
-            }
-        }
+.c-nav__logo {
+    position: absolute;
+    left: -100vw;
+    @media only screen and (min-width: 600px) {
+        left: auto;
     }
-
 }

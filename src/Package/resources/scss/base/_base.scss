@@ -38,6 +38,7 @@ h1, .title {
     font-size: 3rem;
     line-height: 1;
     margin: 0 0 1.25rem;
+    font-weight: bold;
     @media only screen and (min-width: 600px) {
         font-size: 48px;
     }
@@ -63,8 +64,10 @@ h2, .title--sub {
 
 h3, h4, .title--subsub {
     margin-top: $paragraph-margin*1.5;
-    font-size: 1.25rem;
+     margin-bottom: 1rem;
+    font-size: 1.5em;
     line-height: inherit;
+    line-height: 1;
 }
 
 p, ol, ul, blockquote, img, table, form, fieldset, pre, iframe, object, embed, video, audio, figure, figcaption, canvas, .par, .paragraph, h4, .ui-dialog-buttonset {

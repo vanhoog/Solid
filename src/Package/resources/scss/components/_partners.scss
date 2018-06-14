@@ -3,6 +3,7 @@
     background-size: cover;
     padding-top: 5em;
     padding-bottom:4.25em;
+    position: relative;
     &:before {
         content: "";
         position: absolute;
@@ -15,18 +16,21 @@
     img {
         margin: 0 auto;
         display: block;
+        width: 100%;
     }
     .o-columns {
         margin-left: -1.35rem;
         margin-right: -1.35rem;
+        text-align: center;
     }
     .c-partner__item {
         vertical-align: middle;
-        width: 50%;
+        width: 120px;
+        padding: 0  1.35rem;
         @media only screen and (min-width: 600px) {
         //    max-width: 20%;
             width: auto;
-            padding: 0  1.35rem;
+
         }
     }
 }

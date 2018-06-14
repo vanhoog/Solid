@@ -29,11 +29,20 @@
     background-color: #ffffff;
     border-bottom: 1px solid $secondary-color;
 }
-
+.u-primary {
+    color: $primary-color;
+}
+.u-secondary {
+    color: $secondary-color;
+}
 .u-shadow {
     box-shadow: $basicShadow;
 }
-
+.u-border{
+    padding: 20px;
+    border-radius: 9px 0 9px 9px;
+    border: 2px solid $primary-color;
+}
 .u-radius {
     border-radius: 2px;
 }

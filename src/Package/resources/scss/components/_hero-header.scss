@@ -9,7 +9,19 @@
                 height: 100vh;
             }
         }
+    &.c-hero-header--small {
+        .c-hero-header__inner {
 
+            @media only screen and (min-width: 600px) {
+                height: auto;
+                padding-bottom: 36.71875%;
+                padding-top: 0;
+            }
+        }
+        .c-hero-header__image {
+            background-image: url('../images/background/partners.jpg');
+        }
+    }
     .c-hero-header__image {
         &:before {
             content:"";
@@ -60,10 +72,13 @@
 }
 .c-hero-header__icons {
     position: absolute;
-    bottom: 1em;
+
     text-align: center;
     width: 100%;
     left: 0;
+    @media only screen and (min-width: 600px) {
+        bottom: 1em;
+    }
 }
 .c-hero-header__down {
     display: inline-block;
