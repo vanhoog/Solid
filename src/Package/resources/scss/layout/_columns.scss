@@ -1,7 +1,4 @@
-﻿$colSpacing: 1rem;
-$colPadding: 1.25rem;
-
-.o-columns {
+﻿.o-columns {
     margin-left: calc(#{-$colSpacing}/2);
     margin-right: calc(#{-$colSpacing}/2);
     margin-top: calc(#{-$colSpacing}/2);
@@ -23,9 +20,9 @@ $colPadding: 1.25rem;
                 padding: $colPadding;
                 margin-bottom: -9999px;
                 padding-bottom: 9999px;
-                border: calc(#{$colSpacing}/2) solid #ffffff; // color of the websites background
+                border: calc(#{$colSpacing}/2) solid $main-bg; // color of the websites background
                 border-bottom: none;
-                border-top: $colSpacing solid #ffffff; // color of the websites background
+                border-top: $colSpacing solid $main-bg; // color of the websites background
             }
         }
     }
@@ -41,29 +38,29 @@ $colPadding: 1.25rem;
     padding: 0 calc(#{$colSpacing}/2);
     width: 100%;
 
-    @for $i from 1 through 3 {
-        $width: percentage(1 / $i);
+    @for $i from 1 through $gridSize {
+        $width: calc(100% / (#{$gridSize} / #{$i}));
 
-        &--small-#{$i} {
+        &--#{$i} {
             width: $width;
         }
     }
 
     @media only screen and (min-width: 600px) {
-        @for $i from 1 through 6 {
-            $width: percentage(1 / $i);
+        @for $i from 1 through $gridSize {
+            $width: calc(100% / (#{$gridSize} / #{$i}));
 
-            &--mid-#{$i} {
+            &--m-#{$i} {
                 width: $width;
             }
         }
     }
 
     @media only screen and (min-width: 900px) {
-        @for $i from 1 through 12 {
-            $width: percentage(1 / $i);
+        @for $i from 1 through $gridSize {
+            $width: calc(100% / (#{$gridSize} / #{$i}));
 
-            &--#{$i} {
+            &--l-#{$i} {
                 width: $width;
             }
         }

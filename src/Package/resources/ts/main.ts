@@ -8,6 +8,5 @@ $(function() {
     let loadmore = new LoadMore();
     let lightbox = new Lightbox();
     let anchors = new Anchors();
-    console.log(anchors)
     anchors.parse();
 });
