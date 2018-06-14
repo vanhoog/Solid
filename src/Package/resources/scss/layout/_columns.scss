@@ -50,7 +50,7 @@
         @for $i from 1 through $gridSize {
             $width: calc(100% / (#{$gridSize} / #{$i}));
 
-            &--m-#{$i} {
+            &--M-#{$i} {
                 width: $width;
             }
         }
@@ -60,7 +60,7 @@
         @for $i from 1 through $gridSize {
             $width: calc(100% / (#{$gridSize} / #{$i}));
 
-            &--l-#{$i} {
+            &--L-#{$i} {
                 width: $width;
             }
         }

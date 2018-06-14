@@ -533,54 +533,54 @@ select {
   .o-column--12 {
     width: calc(100% / (12 / 12)); }
   @media only screen and (min-width: 600px) {
-    .o-column--m-1 {
+    .o-column--M-1 {
       width: calc(100% / (12 / 1)); }
-    .o-column--m-2 {
+    .o-column--M-2 {
       width: calc(100% / (12 / 2)); }
-    .o-column--m-3 {
+    .o-column--M-3 {
       width: calc(100% / (12 / 3)); }
-    .o-column--m-4 {
+    .o-column--M-4 {
       width: calc(100% / (12 / 4)); }
-    .o-column--m-5 {
+    .o-column--M-5 {
       width: calc(100% / (12 / 5)); }
-    .o-column--m-6 {
+    .o-column--M-6 {
       width: calc(100% / (12 / 6)); }
-    .o-column--m-7 {
+    .o-column--M-7 {
       width: calc(100% / (12 / 7)); }
-    .o-column--m-8 {
+    .o-column--M-8 {
       width: calc(100% / (12 / 8)); }
-    .o-column--m-9 {
+    .o-column--M-9 {
       width: calc(100% / (12 / 9)); }
-    .o-column--m-10 {
+    .o-column--M-10 {
       width: calc(100% / (12 / 10)); }
-    .o-column--m-11 {
+    .o-column--M-11 {
       width: calc(100% / (12 / 11)); }
-    .o-column--m-12 {
+    .o-column--M-12 {
       width: calc(100% / (12 / 12)); } }
   @media only screen and (min-width: 900px) {
-    .o-column--l-1 {
+    .o-column--L-1 {
       width: calc(100% / (12 / 1)); }
-    .o-column--l-2 {
+    .o-column--L-2 {
       width: calc(100% / (12 / 2)); }
-    .o-column--l-3 {
+    .o-column--L-3 {
       width: calc(100% / (12 / 3)); }
-    .o-column--l-4 {
+    .o-column--L-4 {
       width: calc(100% / (12 / 4)); }
-    .o-column--l-5 {
+    .o-column--L-5 {
       width: calc(100% / (12 / 5)); }
-    .o-column--l-6 {
+    .o-column--L-6 {
       width: calc(100% / (12 / 6)); }
-    .o-column--l-7 {
+    .o-column--L-7 {
       width: calc(100% / (12 / 7)); }
-    .o-column--l-8 {
+    .o-column--L-8 {
       width: calc(100% / (12 / 8)); }
-    .o-column--l-9 {
+    .o-column--L-9 {
       width: calc(100% / (12 / 9)); }
-    .o-column--l-10 {
+    .o-column--L-10 {
       width: calc(100% / (12 / 10)); }
-    .o-column--l-11 {
+    .o-column--L-11 {
       width: calc(100% / (12 / 11)); }
-    .o-column--l-12 {
+    .o-column--L-12 {
       width: calc(100% / (12 / 12)); } }
 
 main:before {
