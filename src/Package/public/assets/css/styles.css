@@ -648,6 +648,18 @@ main:before {
     .c-nav-toggle, .c-nav-toggle:visited {
       display: none; } }
 
+.c-nav-bg {
+  background-color: #ff5d33; }
+
+.c-nav-logo {
+  margin-left: -0.875rem;
+  display: inline-block;
+  padding: 0.875rem;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none; }
+  .c-nav-logo:hover {
+    background-color: #cc2a00; }
+
 .c-nav {
   position: fixed;
   top: 0;
@@ -876,6 +888,9 @@ button, .c-btn, .c-btn:visited {
   overflow: visible;
   position: fixed;
   width: auto; }
+
+.u-light {
+  color: #ffffff; }
 
 .u-quiet-bg {
   background-color: #fafafa; }

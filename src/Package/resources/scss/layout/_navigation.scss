@@ -11,6 +11,7 @@ main {
         transition: background $hoverTransition, z-index 0s 0.3s;
     }
 }
+
 .is-activeNav {
     main {
         &:before {
@@ -88,7 +89,21 @@ main {
         display: none;
     }
 }
+.c-nav-bg{
+    background-color: lighten($secondary-color, 10%);
 
+}
+.c-nav-logo {
+    margin-left: -0.875rem;
+    
+    display: inline-block;
+    padding: 0.875rem;
+    transition: $hoverTransition;
+    text-decoration: none;
+    &:hover {
+        background-color: darken($secondary-color, 10%);
+    }
+}
 .c-nav {
     position: fixed;
     top: 0;
