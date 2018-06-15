@@ -13,18 +13,22 @@ button, .c-btn, .c-btn:visited {
     border-radius: 2px;
     line-height: 1.25;
     font-size: 1em;
-
+    box-shadow: $basicShadow;
     &:hover {
         background-color: $secondary-color;
+        box-shadow: $hoverShadow;
+    }
+    &:active {
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 0px;
     }
 }
 
 .c-btn--secondary, .c-btn--secondary:visited {
     background-color: $secondary-color;
-    box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0), 0px 0px 0px 0px rgba(0, 0, 0, 0);
+
     &:hover {
         background-color: $primary-color;
-        box-shadow: $hoverShadow;
+
     }
 }
 
@@ -60,12 +64,20 @@ button, .c-btn, .c-btn:visited {
 
     &.c-btn--reverse-secondary, .c-btn--reverse-secondary:visited {
         border-color: $primary-color;
-        color: $secondary-color;
-
+        color: $primary-color;
+        &:after {
+               border-left: 1px solid $primary-color;
+        }
         &:hover {
             background-color: $primary-color;
             color: #ffffff;
+            &:after {
+                   border-left: 1px solid #fafafa;
+            }
         }
+    }
+    &:active {
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 0px;
     }
 }
 
