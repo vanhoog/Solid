@@ -38,7 +38,7 @@
     padding: 0 calc(#{$colSpacing}/2);
     width: 100%;
     .o-column__inner{
-        padding: rem(20px        
+        padding: rem(20px);
     }
     @for $i from 1 through $gridSize {
         $width: calc(100% / (#{$gridSize} / #{$i}));

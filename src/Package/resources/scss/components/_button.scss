@@ -4,19 +4,64 @@ button, .c-btn, .c-btn:visited {
     border: none;
     cursor: pointer;
     padding: calc(#{$btnPadding}/2) $btnPadding;
-    background-color: $primary-color;
+
     display: inline-block;
-    color: #ffffff;
+    color: #444;
     text-decoration: none;
     font-weight: $regular;
-    transition: all $hoverTransition;
+
+        transition: all 0.5s $hoverTransitionAlt, box-shadow 0.3s $hoverTransitionAlt ;
     border-radius: rem(2px);
     line-height: 1.25;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 0px;
+    width: auto;
+    position: relative;
+    span {
+        position: relative;
+        z-index: 1;
+    }
 
-    box-shadow: $basicShadow;
+    &.c-btn--external {
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+    &:before {
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all 0.3s $hoverTransitionAlt;
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        right: -30px;
+        bottom: 0;
+        top: 0;
+        z-index: 0;
+        width: 0%;
+        left: 50%;
+        background-color: $primary-color;
+    }
+    &:after {
+        content: "\0000a0›";
+        display: inline-block;
+
+        position: relative;
+        z-index: 1;
+
+
+    }
     &:hover {
-        background-color: $secondary-color;
+        transition: all 0.5s $hoverTransitionAlt 0.4s, box-shadow 0.3s $hoverTransitionAlt 0s, color $hoverTransition;
+        color: #ffffff;
         box-shadow: $hoverShadow;
+        background-color: transparent;
+            &:before {
+                transform: translateX(-0%);
+                left: 0%;
+                width: 100%;
+                opacity: 1;
+            }
     }
     &:active {
         box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 0px;
@@ -24,11 +69,13 @@ button, .c-btn, .c-btn:visited {
 }
 
 .c-btn--secondary, .c-btn--secondary:visited {
-    background-color: $secondary-color;
+
+    &:before {
+        background-color: $secondary-color;
+    }
 
     &:hover {
-        background-color: $primary-color;
-
+        background-color: transparent;
     }
 }
 
@@ -44,16 +91,17 @@ button, .c-btn, .c-btn:visited {
     &:after {
         border-left: rem(1px) solid $primary-color;
         margin-left: 1em;
-        content: "\A0\A0\203A";
+        //content: "\A0\A0\203A";
         position: absolute;
         right: $btnPadding;
-        padding: 0.35em 0   ;
+        padding-top: 0.35em;
+        padding-bottom: 0.35em;
         top: 0;
-        padding-left: 0.5rem;
         bottom: 0;
+        padding-left: 0.5rem;
     }
     &:hover {
-        background-color: $primary-color;
+    //    background-color: $primary-color;
         box-shadow: none;
         color: #ffffff;
         box-shadow: $hoverShadow;
@@ -69,8 +117,10 @@ button, .c-btn, .c-btn:visited {
                border-left: rem(1px) solid $secondary-color;
         }
         &:hover {
-            background-color: $secondary-color;
             color: #ffffff;
+            &:before {
+                background-color: $secondary-color;
+            }
             &:after {
                    border-left: rem(1px) solid #fafafa;
             }
@@ -80,6 +130,8 @@ button, .c-btn, .c-btn:visited {
         box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 0px;
     }
 }
+
+
 
 .c-btn-group {
     font-family: monospace; // for spacing columns correctly
