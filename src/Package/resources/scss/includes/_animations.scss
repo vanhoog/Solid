@@ -1,6 +1,5 @@
 ﻿/* Include animations */
 
-
 .js .js-fadein, .js .js-fadein-up, .js .js-fadein-down, .js .js-fadein-left, .js .js-fadein-right {
     opacity: 0;
     //transition: opacity .8s cubic-bezier(0.43, 0, 0.14, 1.01),transform .8s cubic-bezier(0.43, 0, 0.14, 1.01);
@@ -42,7 +41,7 @@
 
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: $mid) {
     .js .js-fadein-left {
         -ms-transform: translateX(320px);
         transform: translateX(320px)

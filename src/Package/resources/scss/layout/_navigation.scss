@@ -1,4 +1,12 @@
-﻿//Adjust breakpoints depending on menu items.
+﻿
+body {
+    @media only screen and (min-width: $mid) {
+        padding-top: 63px; //Navigation Height. This will be taken over by the JS after the page has been loaded. This is needed for the page not to jump on load
+    }
+    @media only screen and (min-width: $large) {
+        padding-top: 63px; //Navigation Height. This will be taken over by the JS after the page has been loaded. This is needed for the page not to jump on load
+    }
+}
 main {
     &:before {
         content: "";
@@ -85,12 +93,12 @@ main {
         vertical-align: middle;
     }
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: $mid) {
         display: none;
     }
 }
 .c-nav-bg{
-    background-color: lighten($secondary-color, 10%);
+    background-color: $secondary-color;
 
 }
 .c-nav-logo {
@@ -110,17 +118,17 @@ main {
     left: auto;
     right: 0;
     bottom: 0;
-    background-color: lighten($secondary-color, 10%);
+    background-color: $secondary-color;
     transition: $hoverTransition;
     z-index: 999;
     transform: translateX(100%);
     max-width: 320px;
     width: 100%;
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: $mid) {
         max-width: none;
         transform: translateX(0);
-        position: fixed;
+        position: absolute;
         bottom: auto;
     }
 }
@@ -131,7 +139,7 @@ main {
     padding: 0;
     margin-left: -$page-margin;
     margin-right: -$page-margin;
-     @media only screen and (min-width: 600px) {
+     @media only screen and (min-width: $mid) {
          text-align: right;
      }
 }
@@ -139,7 +147,7 @@ main {
 .c-nav__item {
     margin: 0;
     padding: 0;
-     @media only screen and (min-width: 600px) {
+     @media only screen and (min-width: $mid) {
         display: inline-block;
         vertical-align: top;
      }
@@ -162,7 +170,7 @@ main {
             background-color: darken($secondary-color, 20%) !important;
         }
     }
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: $mid) {
         .c-nav__link {
 
             padding-left: $page-margin;
@@ -182,7 +190,7 @@ main {
     .c-nav__link {
         background-color: transparent;
     }
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: $mid) {
         .c-subNav {
             height: 39px;
             transition: $hoverTransition;
@@ -202,7 +210,7 @@ main {
     .c-nav__link--main, .c-nav__link--main:visited {
         border-bottom: none;
     }
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: $mid) {
         .c-nav__link--main, .c-nav__link--main:visited {
             border-bottom: none !important;
             &:after {
@@ -220,7 +228,7 @@ main {
 }
 
 .c-nav__link, .c-nav__link:visited {
-    background-color: lighten($secondary-color, 10%);
+    background-color: $secondary-color;
     font-size: 14px;
     display: block;
     padding: 1.6em $page-margin;
@@ -233,7 +241,7 @@ main {
         background-color:  darken($secondary-color, 10%);
     }
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: $mid) {
         border-bottom: none;
     }
 }

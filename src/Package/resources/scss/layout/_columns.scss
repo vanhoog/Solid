@@ -2,11 +2,11 @@
     margin-left: calc(#{-$colSpacing}/2);
     margin-right: calc(#{-$colSpacing}/2);
     margin-top: calc(#{-$colSpacing}/2);
-    margin-bottom: -$colSpacing;
+    margin-bottom: calc(#{-$colSpacing}/2);
     font-family: monospace; // for spacing columns correctly
     letter-spacing: -.65em; // this too */
     text-align: left; // center or justify for columns in last row
-    &--equal-height {
+    &--eq {
         overflow: hidden;
         margin-bottom: 0;
         margin-top: -$colSpacing;
@@ -37,7 +37,9 @@
     display: inline-block;
     padding: 0 calc(#{$colSpacing}/2);
     width: 100%;
-
+    .o-column__inner{
+        padding: rem(20px        
+    }
     @for $i from 1 through $gridSize {
         $width: calc(100% / (#{$gridSize} / #{$i}));
 
@@ -46,7 +48,7 @@
         }
     }
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: $mid) {
         @for $i from 1 through $gridSize {
             $width: calc(100% / (#{$gridSize} / #{$i}));
 
@@ -56,7 +58,7 @@
         }
     }
 
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: $large) {
         @for $i from 1 through $gridSize {
             $width: calc(100% / (#{$gridSize} / #{$i}));
 

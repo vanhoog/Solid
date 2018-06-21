@@ -28,7 +28,7 @@
         top: 0;
         right: 0;
         padding: .5em;
-        @media only screen and (min-width: 900px) {
+        @media only screen and (min-width: $large) {
             left: 100%;
             top: 0;
             right: unset;
@@ -59,4 +59,9 @@
         top: 50%;
         transform: translateY(-50%);
     }
+}
+
+.u-is-visible {
+    opacity: 1;
+    z-index: 999999;
 }

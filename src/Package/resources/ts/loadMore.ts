@@ -18,23 +18,23 @@ export class LoadMoreElements {
         this.element = items;
         this.items = this.element.find('.js-item');
         this.text =  this.element.attr('data-text');
-        if (this.items.length > 2) {
+        if (this.items.length > 4) {
             this.element.append(`
                 <div class="o-section-sub o-section-end u-center">
                     <button class="c-btn c-btn--secondary js-btn" >${this.text}</button>
                 </div>
             `)
             this.items.hide();
-            this.items.slice(0, 2).show();
+            this.items.slice(0, 4).show();
         }
         this.items.hide();
-        this.items.slice(0, 2).show();
+        this.items.slice(0, 4).show();
         this.btn = this.element.find('.js-btn');
         this.btn.on('click', this.more.bind(this));
     }
 
     more() {
-        this.items.filter(':hidden').slice(0, 2).show();
+        this.items.filter(':hidden').slice(0, 4).show();
         if (this.items.length == this.items.filter(':visible').length) {
             this.btn.hide();
         }

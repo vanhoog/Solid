@@ -27,6 +27,7 @@
     "watchify": "^3.11.0"
   },
   "dependencies": {
-    "@wearejust/navigate": "^1.0.10"
+    "@wearejust/navigate": "^1.0.10",
+    "sass-rem": "^2.0.1"
   }
 }

@@ -1,13 +1,13 @@
 ﻿// Project colors
 $primary-color: #52a59b;
-$secondary-color: #215a73;
+$secondary-color: #2c799b;
 $tertiary-color: #2c7a86;
 $quiet-color: #fafafa;
 $text-color: #222;
 
 // Grid
-$colSpacing: 1rem;
-$colPadding: 1.25rem;
+$colSpacing: rem(30px);// in pixels, for easyness
+$colPadding: rem(40px);// in pixels, for easyness
 $gridSize: 12;
 $main-bg: #ffffff;
 
@@ -17,12 +17,12 @@ $regular: 400;
 $bold: 600;
 
 // Base Font
-$base-font-size: rem-calc(14);
+$base-font-size: rem(14px);
 $font-family: Arial, sans-serif;
 
 //Margin
-$page-margin: 1.25rem;
-$paragraph-margin: 1em;
+$page-margin: rem(20px);
+$paragraph-margin: rem(14px);
 
 //Transition
 $hoverTransition: 0.3s cubic-bezier(.25,.8,.25,1);
@@ -31,3 +31,7 @@ $hoverTransition: 0.3s cubic-bezier(.25,.8,.25,1);
 $basicShadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 $hoverShadow: 0px 4px 10px 0 rgba(0,0,0,0.1), 0px 2px 10px 0px rgba(0,0,0,0.1);
 $fixedShadow: rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px;
+
+
+$mid: 600px;
+$large: 900px;

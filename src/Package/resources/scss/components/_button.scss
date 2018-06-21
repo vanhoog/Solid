@@ -10,9 +10,9 @@ button, .c-btn, .c-btn:visited {
     text-decoration: none;
     font-weight: $regular;
     transition: all $hoverTransition;
-    border-radius: 2px;
+    border-radius: rem(2px);
     line-height: 1.25;
-    font-size: 1em;
+
     box-shadow: $basicShadow;
     &:hover {
         background-color: $secondary-color;
@@ -34,16 +34,16 @@ button, .c-btn, .c-btn:visited {
 
 .c-btn--reverse, .c-btn--reverse:visited {
     background-color: transparent;
-    color: $secondary-color;
-    border: solid 1px $secondary-color;
+    color: $primary-color;
+    border: solid rem(1px) $primary-color;
     padding: calc((#{$btnPadding} / 2) - 1px) calc(#{$btnPadding} - 1px);
     padding-right:  calc((#{$btnPadding} * 3.5) - 1px);
-        box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0), 0px 0px 0px 0px rgba(0, 0, 0, 0);
-    font-size: 1rem;
+    box-shadow: 0px 0px 0px 0 rgba(0, 0, 0, 0), 0px 0px 0px 0px rgba(0, 0, 0, 0);
+
     position: relative;
     &:after {
-        border-left: 1px solid $secondary-color;
-        margin-left: 1rem;
+        border-left: rem(1px) solid $primary-color;
+        margin-left: 1em;
         content: "\A0\A0\203A";
         position: absolute;
         right: $btnPadding;
@@ -53,7 +53,7 @@ button, .c-btn, .c-btn:visited {
         bottom: 0;
     }
     &:hover {
-        background-color: $secondary-color;
+        background-color: $primary-color;
         box-shadow: none;
         color: #ffffff;
         box-shadow: $hoverShadow;
@@ -63,16 +63,16 @@ button, .c-btn, .c-btn:visited {
     }
 
     &.c-btn--reverse-secondary, .c-btn--reverse-secondary:visited {
-        border-color: $primary-color;
-        color: $primary-color;
+        border-color: $secondary-color;
+        color: $secondary-color;
         &:after {
-               border-left: 1px solid $primary-color;
+               border-left: rem(1px) solid $secondary-color;
         }
         &:hover {
-            background-color: $primary-color;
+            background-color: $secondary-color;
             color: #ffffff;
             &:after {
-                   border-left: 1px solid #fafafa;
+                   border-left: rem(1px) solid #fafafa;
             }
         }
     }

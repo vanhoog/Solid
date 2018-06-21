@@ -6,7 +6,6 @@ export class FadeIn {
     scrollBound: any;
     constructor() {
         this.selector = ".js-fadein, .js-fadein-up, .js-fadein-down, .js-fadein-left, .js-fadein-right";
-
         this.resizeBound = this.resize.bind(this);
         this.scrollBound = this.scroll.bind(this);
         this.clear();

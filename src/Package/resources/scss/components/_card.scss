@@ -1,8 +1,8 @@
 ﻿
-.c-image-card {
-    margin-left: -$colPadding;
-    margin-top: -$colPadding;
-    margin-right: -$colPadding;
+.c-image-card {    
+    margin-left: calc( #{-$colPadding} / 2 );
+    margin-top: calc( #{-$colPadding} / 2 );
+    margin-right: calc( #{-$colPadding} / 2 );
 
     .c-image-card__wrapper {
         padding-bottom: 45%;

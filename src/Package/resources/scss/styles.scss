@@ -3,8 +3,9 @@
 //General includes
 @import "base/normalize",
         "includes/fonts",
-        "includes/variables",
-        "includes/mixins";
+        "includes/mixins",
+        "includes/variables";
+
 
 //Helper includes
 
@@ -23,7 +24,8 @@
 //Components includes
 @import "components/button",
         "components/card",
-        "components/social";
+        "components/social",
+        "components/lightbox";
 
 //pages includes
 

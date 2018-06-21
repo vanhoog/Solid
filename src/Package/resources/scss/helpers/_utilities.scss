@@ -1,4 +1,4 @@
-﻿// Utilities
+﻿// Utilities - Mostly consists of 1 trick ponies
 
 .u-accessibility, .js .js-accessibility {
     clip: rect(1px, 1px, 1px, 1px);
@@ -18,6 +18,12 @@
 .u-light {
     color: #ffffff;
 }
+.u-primary {
+    color: $primary-color;
+}
+.u-secondary {
+    color: $secondary-color;
+}
 .u-quiet-bg {
     background-color: $quiet-color;
 }
@@ -33,17 +39,33 @@
 }
 
 .u-radius {
-    border-radius: 2px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.u-circle {
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.u-block {
+    display: block;
+}
+
+.u-accent {
+    font-size: 1.25rem;
 }
 
 .u-rel {
     position: relative;
 }
+
 .u-list {
     padding:0;
     margin: 0;
     list-style: none;
 }
+
 .u-video {
     background-color: #000;
     display: block;
@@ -59,6 +81,7 @@
     position: relative;
     width: 100%;
 }
+
  .u-image--66 {
      padding-bottom: 66.79%;
  }
@@ -81,11 +104,13 @@
     margin-right: -$page-margin;
 }
 
-.u-right {
-    text-align: right;
+.u-left {
+    text-align: left;
+}
+.u-center {
+    text-align: center;
 }
 
-.u-circle {
-    overflow: hidden;
-    border-radius: 100%;
+.u-right {
+    text-align: right;
 }
