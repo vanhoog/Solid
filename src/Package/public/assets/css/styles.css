@@ -1480,8 +1480,8 @@ button, .c-btn, .c-btn:visited {
 
 .c-slider__img {
   position: absolute;
-  top: -2em;
-  bottom: -2em;
+  top: -3em;
+  bottom: -3em;
   width: 100%;
   overflow: hidden; }
 
@@ -1541,12 +1541,6 @@ body {
   position: relative;
   margin-top: -3.5vw;
   overflow: hidden; }
-  .c-hero-header .c-hero-header__inner {
-    padding-top: 7.5em;
-    padding-bottom: 3em; }
-    @media only screen and (min-width: 600px) {
-      .c-hero-header .c-hero-header__inner {
-        height: 100vh; } }
   @media only screen and (min-width: 600px) {
     .c-hero-header.c-hero-header--small .c-hero-header__inner {
       height: auto;
@@ -1556,14 +1550,9 @@ body {
     background-image: url("../images/background/partners.jpg"); }
   .c-hero-header .c-hero-header__image {
     width: 100%;
-    background-image: url("../images/background/home.jpg");
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: -2.5em; }
+    margin-bottom: -2.5em; }
     .c-hero-header .c-hero-header__image:before {
+      z-index: 1;
       content: "";
       background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, transparent 50%);
       /* FF3.6-15 */
@@ -1598,6 +1587,7 @@ body {
     @media only screen and (min-width: 600px) {
       .c-hero-header .c-hero-header__text {
         position: absolute;
+        z-index: 2;
         top: 0;
         left: 0;
         right: 0;
@@ -1612,7 +1602,7 @@ body {
   left: 0; }
   @media only screen and (min-width: 600px) {
     .c-hero-header__icons {
-      bottom: 1em; } }
+      bottom: 3em; } }
 
 .c-hero-header__down {
   display: inline-block;
