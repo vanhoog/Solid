@@ -9,5 +9,6 @@ $(function() {
     let loadmore = new LoadMore();
     let lightbox = new Lightbox();
     //let fadein = new FadeIn();
-    let anchors = new Anchors();    
+    let anchors = new Anchors();
+    console.log(lightbox.itemsArray)
 });

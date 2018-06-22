@@ -1,16 +1,15 @@
 $btnPadding: 1em;
 
 button, .c-btn, .c-btn:visited {
+    background-color: transparent;
     border: none;
     cursor: pointer;
     padding: calc(#{$btnPadding}/2) $btnPadding;
-
     display: inline-block;
     color: #444;
     text-decoration: none;
     font-weight: $regular;
-
-        transition: all 0.5s $hoverTransitionAlt, box-shadow 0.3s $hoverTransitionAlt ;
+    transition: all 0.5s $hoverTransitionAlt, box-shadow 0.3s $hoverTransitionAlt ;
     border-radius: rem(2px);
     line-height: 1.25;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 0px;
@@ -20,7 +19,13 @@ button, .c-btn, .c-btn:visited {
         position: relative;
         z-index: 1;
     }
-
+    &.c-btn--more {
+        overflow: hidden;
+        &:after {
+            display: block;
+                transform: rotate(90deg);
+        }
+    }
     &.c-btn--external {
         &:after {
             transform: rotate(-45deg);

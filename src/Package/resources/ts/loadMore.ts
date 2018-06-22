@@ -21,7 +21,9 @@ export class LoadMoreElements {
         if (this.items.length > 4) {
             this.element.append(`
                 <div class="o-section-sub o-section-end u-center">
-                    <button class="c-btn c-btn--secondary js-btn" >${this.text}</button>
+                    <button class="c-btn c-btn--secondary c-btn--more js-btn" >
+                        <span>${this.text}</span>
+                    </button>
                 </div>
             `)
             this.items.hide();

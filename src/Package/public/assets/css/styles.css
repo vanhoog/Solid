@@ -776,6 +776,7 @@ footer {
   font-size: 14px; }
 
 button, .c-btn, .c-btn:visited {
+  background-color: transparent;
   border: none;
   cursor: pointer;
   padding: calc(1em/2) 1em;
@@ -792,6 +793,11 @@ button, .c-btn, .c-btn:visited {
   button span, .c-btn span, .c-btn:visited span {
     position: relative;
     z-index: 1; }
+  button.c-btn--more, .c-btn.c-btn--more, .c-btn:visited.c-btn--more {
+    overflow: hidden; }
+    button.c-btn--more:after, .c-btn.c-btn--more:after, .c-btn:visited.c-btn--more:after {
+      display: block;
+      transform: rotate(90deg); }
   button.c-btn--external:after, .c-btn.c-btn--external:after, .c-btn:visited.c-btn--external:after {
     transform: rotate(-45deg); }
   button:before, .c-btn:before, .c-btn:visited:before {
