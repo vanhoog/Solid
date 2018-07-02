@@ -6,7 +6,7 @@
     font-family: monospace; // for spacing columns correctly
     letter-spacing: -.65em; // this too */
     text-align: left; // center or justify for columns in last row
-    &--eq {
+    &--equal {
         overflow: hidden;
         margin-bottom: 0;
         margin-top: -$colSpacing;

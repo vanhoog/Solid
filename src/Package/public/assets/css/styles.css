@@ -479,15 +479,15 @@ select {
   font-family: monospace;
   letter-spacing: -.65em;
   text-align: left; }
-  .o-columns--eq {
+  .o-columns--equal {
     overflow: hidden;
     margin-bottom: 0;
     margin-top: -1.875rem; }
-    .o-columns--eq .o-column {
+    .o-columns--equal .o-column {
       margin-top: 0;
       margin-bottom: 2.5rem;
       padding: 0; }
-      .o-columns--eq .o-column .o-column__inner {
+      .o-columns--equal .o-column .o-column__inner {
         padding: 2.5rem;
         margin-bottom: -9999px;
         padding-bottom: 9999px;

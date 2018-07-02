@@ -25,7 +25,10 @@ Nav.prototype.toggle = function (e) {
     e.preventDefault();
     $('body').toggleClass('is-activeNav');
 }
-
+Nav.prototype.open = function (e) {
+    e.preventDefault();
+    $('body').addClass('is-activeNav');
+}
 Nav.prototype.destroy = function () {
     if ($('.is-activeNav').length) {
         $('body').removeClass('is-activeNav');
@@ -49,6 +52,7 @@ var FadeIn = function () {
 
 FadeIn.prototype.clear = function () {
     this.window.off("resize", this.resizeBound), this.window.off("scroll", this.scrollBound), this.items = [], delete this.item
+    Nav.open();
 }
 FadeIn.prototype.parse = function (t) {
     t || (t = this.body);
