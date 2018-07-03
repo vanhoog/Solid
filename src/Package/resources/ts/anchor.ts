@@ -1,5 +1,4 @@
-
- export class Anchors {
+class Anchors {
     items = [];
     public hash: any;
     nav = $('nav');
@@ -66,3 +65,4 @@ class Anchor extends Anchors {
         }
     }
 }
+let anchors = new Anchors();

@@ -1,14 +1,20 @@
-export class Lightbox {
+class Lightbox {
     element = $('.js-lightbox');
-    constructor() {
-        let openItems;
-        this.element.find('.js-item').each((index, item) => {
-            let items = $(item);
-            let openItems = new LightboxItems(items);
-        });
-    }
-    
+    items: any;
+  constructor() {
+    this.items = this.element.find('.js-item');
+    let openItems;
+    this.items.each((index, item) => {
+        let items = $(item);
+        let openItems = new LightboxItems(items);
+    });
+
+  }
+  next() {
+      console.log('test');
+  }
 }
+
 
 class LightboxItems {
     element: any;
@@ -38,6 +44,7 @@ class LightboxItems {
                             </div>`;
         $('.c-lightbox').on('click', this.close.bind(this));
 
+
     }
     open(event) {
         event.preventDefault();
@@ -56,3 +63,5 @@ class LightboxItems {
         $('.c-lightbox__inner').empty();
     }
 }
+
+let lichtbox = new Lightbox();

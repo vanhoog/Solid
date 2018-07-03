@@ -1,4 +1,4 @@
-export class Menu {
+class Menu {
     menu: any;
     constructor() {
         $('.c-nav-toggle').on('click', this.toggle.bind(this));
@@ -28,3 +28,4 @@ export class Menu {
         }
     }
 }
+let menu = new Menu();

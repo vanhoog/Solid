@@ -1,4 +1,4 @@
-export class LoadMore {
+class LoadMore {
     element = $('.js-LoadMore');
     constructor() {
         let loadMoreElements;
@@ -42,3 +42,4 @@ export class LoadMoreElements {
         }
     }
 }
+let loadmore = new LoadMore();
